@@ -18,6 +18,16 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>beads-library</groupId>
+            <artifactId>beads-library</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>beads-io</groupId>
+            <artifactId>beads-io</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     
     <build>
