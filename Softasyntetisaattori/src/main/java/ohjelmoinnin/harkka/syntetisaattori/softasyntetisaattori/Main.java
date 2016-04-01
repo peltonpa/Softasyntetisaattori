@@ -1,6 +1,6 @@
 package ohjelmoinnin.harkka.syntetisaattori.softasyntetisaattori;
 
-import Kayttoliittyma.*;
+import ohjelmoinnin.harkka.syntetisaattori.kayttoliittyma.Tekstikayttoliittyma;
 import java.util.Scanner;
 import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.ugens.Gain;

@@ -1,4 +1,4 @@
-package Sovelluslogiikka;
+package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class Syntetisaattorisovellus {
     }
     
     public void asetaNuottiKaikille(String nuotti) {
-        for(int i = 0; i < this.oskillaattorit.size(); i++) {
+        for (int i = 0; i < this.oskillaattorit.size(); i++) {
             this.oskillaattorit.get(i).asetaNuotti(nuotti);
         }
     }

@@ -1,4 +1,4 @@
-package Sovelluslogiikka;
+package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
 import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
@@ -19,7 +19,7 @@ public class Oskillaattori {
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
     }
-    
+
     public Oskillaattori(AudioContext ac) {
         this.ac = ac;
         this.aalto = new WavePlayer(ac, Nuotti.valueOf("C").getTaajuus(), Buffer.SINE);
@@ -33,7 +33,7 @@ public class Oskillaattori {
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
     }
-    
+
     public Gain getGain() {
         return this.g;
     }
@@ -41,7 +41,7 @@ public class Oskillaattori {
     public void soi() {
         this.g.addInput(aalto);
     }
-    
+
     public void asetaNuotti(String nuotti) {
         int taajuus = Nuotti.valueOf(nuotti).getTaajuus();
         this.aalto.setFrequency(taajuus);
@@ -50,18 +50,18 @@ public class Oskillaattori {
     public void asetaAaltomuoto(Buffer buffer) {
         this.aalto.setBuffer(buffer);
     }
-    
+
     public void lisaaAanenvoimakkuutta() {
         this.g.setGain(this.g.getGain() + 1);
     }
-    
+
     public void laskeAanenvoimakkuutta() {
         this.g.setGain(this.g.getGain() - 1);
-        if(this.g.getGain() < 0) {
+        if (this.g.getGain() < 0) {
             this.g.setGain(0);
         }
     }
-    
+
     public void hiljennaOskillaattori() {
         this.g.setGain(0);
     }

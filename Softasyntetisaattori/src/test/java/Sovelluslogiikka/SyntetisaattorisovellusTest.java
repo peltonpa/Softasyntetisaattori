@@ -1,6 +1,8 @@
+package Sovelluslogiikka;
 
 
-import Sovelluslogiikka.Syntetisaattorisovellus;
+
+import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Syntetisaattorisovellus;
 import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
 import org.junit.After;

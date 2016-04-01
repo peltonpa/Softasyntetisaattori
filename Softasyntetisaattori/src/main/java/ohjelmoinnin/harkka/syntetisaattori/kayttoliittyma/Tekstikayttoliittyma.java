@@ -1,6 +1,8 @@
-package Kayttoliittyma;
+package ohjelmoinnin.harkka.syntetisaattori.kayttoliittyma;
 
-import Sovelluslogiikka.*;
+import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Syntetisaattorisovellus;
+import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Nuotti;
+import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Aallonmuoto;
 import java.util.Scanner;
 import net.beadsproject.beads.core.AudioContext;
 
@@ -36,13 +38,13 @@ public class Tekstikayttoliittyma {
         }
         System.out.println("jooh elikkäs kiitos käytöstä");
     }
-    
+
     public void uusiOskillaattori(Syntetisaattorisovellus syna) {
-        while(true) {
+        while (true) {
             System.out.println("Valitse aaltomuoto (waveform) oskillaattorille. Vaihtoehdot: "
                     + "KANTTI, SAHA, KOLMIO, SINI, KOHINA");
             String aalto = lukija.nextLine();
-            if(oikeaAaltomuoto(aalto)) {
+            if (oikeaAaltomuoto(aalto)) {
                 syna.lisaaOskillaattori(Aallonmuoto.valueOf(aalto).getAalto(), "C");
                 break;
             }
@@ -70,10 +72,10 @@ public class Tekstikayttoliittyma {
         }
         return false;
     }
-    
+
     public Boolean oikeaAaltomuoto(String aalto) {
-        for(Aallonmuoto a : Aallonmuoto.values()) {
-            if(a.toString().equals(aalto)) {
+        for (Aallonmuoto a : Aallonmuoto.values()) {
+            if (a.toString().equals(aalto)) {
                 return true;
             }
         }
