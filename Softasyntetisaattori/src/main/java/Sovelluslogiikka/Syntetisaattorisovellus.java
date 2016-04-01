@@ -51,4 +51,22 @@ public class Syntetisaattorisovellus {
             this.oskillaattorit.get(i).soi();
         }
     }
+
+    public Envelope getKuori() {
+        return kuori;
+    }
+
+    public AudioContext getAc() {
+        return ac;
+    }
+
+    public List<Oskillaattori> getOskillaattorit() {
+        return oskillaattorit;
+    }
+
+    public Gain getMaster() {
+        return master;
+    }
+    
+    
 }

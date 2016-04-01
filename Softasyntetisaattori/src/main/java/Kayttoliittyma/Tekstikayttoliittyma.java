@@ -17,6 +17,8 @@ public class Tekstikayttoliittyma {
         AudioContext ac = new AudioContext();
         Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
         while (true) {
+            System.out.println("gaini:");
+            System.out.println(syna.getOskillaattorit().get(0).getGain().getGain());
             System.out.println("Paina 3 lisätäksesi uuden äänilähteen (defaulttina on jo yksi), Paina 2 asettaaksesi nuotin, 1 soittaaksesi tämänhetkisen nuotin, 0 lopettaaksesi koko paskan");
             int komento = Integer.parseInt(lukija.nextLine());
             if (komento == 0) {

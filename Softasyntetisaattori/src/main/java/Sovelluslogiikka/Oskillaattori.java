@@ -19,6 +19,13 @@ public class Oskillaattori {
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
     }
+    
+    public Oskillaattori(AudioContext ac) {
+        this.ac = ac;
+        this.aalto = new WavePlayer(ac, Nuotti.valueOf("C").getTaajuus(), Buffer.SINE);
+        this.g = new Gain(ac, 1, 1);
+        this.kuori = kuori;
+    }
 
     public Oskillaattori(AudioContext ac, String nuotti, Buffer buffer) {
         this.ac = ac;
@@ -42,6 +49,33 @@ public class Oskillaattori {
 
     public void asetaAaltomuoto(Buffer buffer) {
         this.aalto.setBuffer(buffer);
+    }
+    
+    public void lisaaAanenvoimakkuutta() {
+        this.g.setGain(this.g.getGain() + 1);
+    }
+    
+    public void laskeAanenvoimakkuutta() {
+        this.g.setGain(this.g.getGain() - 1);
+        if(this.g.getGain() < 0) {
+            this.g.setGain(0);
+        }
+    }
+    
+    public void hiljennaOskillaattori() {
+        this.g.setGain(0);
+    }
+
+    public AudioContext getAc() {
+        return ac;
+    }
+
+    public WavePlayer getAalto() {
+        return aalto;
+    }
+
+    public String getKuori() {
+        return kuori;
     }
 
 }
