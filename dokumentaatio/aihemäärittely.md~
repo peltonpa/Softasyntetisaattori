@@ -7,7 +7,4 @@ Kaikkien käyttäjien toiminnot:
   * Soittaminen
     * kuuluu ääntä jos kaiutin on päällä ja painaa oikeaa näppäintä
   * Ohjelman sulkeminen
-
-Apuna käytetään Javalle tehtyä [Beads-kirjastoa](http://www.beadsproject.net/ "Beads").
-
   
