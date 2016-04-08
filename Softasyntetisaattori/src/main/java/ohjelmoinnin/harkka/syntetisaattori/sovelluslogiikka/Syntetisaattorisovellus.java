@@ -6,6 +6,7 @@ import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
 import net.beadsproject.beads.ugens.Envelope;
 import net.beadsproject.beads.ugens.Gain;
+import ohjelmoinnin.harkka.syntetisaattori.ohjaus.Kontrolleri;
 
 public class Syntetisaattorisovellus {
 
@@ -38,11 +39,13 @@ public class Syntetisaattorisovellus {
             this.master.addInput(g);
         }
 
-        this.kuori.addSegment(1000, 1000);
+  //      this.kuori.addSegment(1000, 1000);
         ac.out.addInput(this.master);
         soitaKaikkiOskillaattorit();
         ac.start();
-        Thread.sleep(2000);
+    }
+    
+    public void lopeta() {
         ac.stop();
     }
 

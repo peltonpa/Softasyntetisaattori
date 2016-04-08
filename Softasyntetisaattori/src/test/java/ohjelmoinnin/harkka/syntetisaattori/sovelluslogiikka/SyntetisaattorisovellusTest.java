@@ -1,4 +1,4 @@
-package Sovelluslogiikka;
+package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
 
 
@@ -62,6 +62,16 @@ public class SyntetisaattorisovellusTest {
        assertEquals(syna.getOskillaattorit().get(0).getAalto().getFrequency(), 294f, 0.1);
        assertEquals(syna.getOskillaattorit().get(1).getAalto().getFrequency(), 294f, 0.1);
        assertEquals(syna.getOskillaattorit().get(2).getAalto().getFrequency(), 294f, 0.1);
+   }
+   
+   @Test
+   public void soitaKaikkiOskillaattoritToimii() {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       syna.lisaaOskillaattori(Buffer.SINE, "C");
+       syna.soitaKaikkiOskillaattorit();
+       
+       assertNotNull(syna.getMaster().getValue());
+       
    }
    
 }

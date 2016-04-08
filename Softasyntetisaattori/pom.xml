@@ -59,10 +59,10 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>Sovelluslogiikka.*</param>
+                        <param>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>Sovelluslogiikka.*</param>
+                        <param>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

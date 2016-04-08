@@ -5,6 +5,7 @@ import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Nuotti;
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Aallonmuoto;
 import java.util.Scanner;
 import net.beadsproject.beads.core.AudioContext;
+import ohjelmoinnin.harkka.syntetisaattori.ohjaus.Kontrolleri;
 
 public class Tekstikayttoliittyma {
 
@@ -19,24 +20,19 @@ public class Tekstikayttoliittyma {
         AudioContext ac = new AudioContext();
         Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
         while (true) {
-            System.out.println("gaini:");
-            System.out.println(syna.getOskillaattorit().get(0).getGain().getGain());
-            System.out.println("Paina 3 lisätäksesi uuden äänilähteen (defaulttina on jo yksi), Paina 2 asettaaksesi nuotin, 1 soittaaksesi tämänhetkisen nuotin, 0 lopettaaksesi koko paskan");
-            int komento = Integer.parseInt(lukija.nextLine());
-            if (komento == 0) {
-                ac.stop();
-                break;
-            } else if (komento == 1) {
-                syna.soita();
-            } else if (komento == 2) {
-                asetaNuotti(syna);
-            } else if (komento == 3) {
+            System.out.println("Jos haluat lisätä oskillaattoreita, syötä 1, jos haluat soittaa syötä mitä tahansa muuta");
+            int syote = Integer.parseInt(lukija.nextLine());
+            if (syote == 1) {
                 uusiOskillaattori(syna);
             } else {
-                System.out.println("Annoit väärän komennon");
+                break;
             }
         }
-        System.out.println("jooh elikkäs kiitos käytöstä");
+        Kontrolleri kontrolleri = new Kontrolleri(syna);
+        //huom, ei toimi vielä
+        System.out.println("Paina näppäimistöltä C, D, E, F, G, B tai A soittaaksesi nuotin.");
+   
+        //System.out.println("jooh elikkäs kiitos käytöstä");
     }
 
     public void uusiOskillaattori(Syntetisaattorisovellus syna) {

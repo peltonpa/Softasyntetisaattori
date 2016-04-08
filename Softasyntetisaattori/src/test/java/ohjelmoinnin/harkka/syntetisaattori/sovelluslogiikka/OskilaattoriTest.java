@@ -1,4 +1,4 @@
-package Sovelluslogiikka;
+package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

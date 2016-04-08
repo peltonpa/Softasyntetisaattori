@@ -13,5 +13,6 @@ public enum Nuotti {
     public int getTaajuus() {
         return this.taajuus;
     }
+    
 
 }
