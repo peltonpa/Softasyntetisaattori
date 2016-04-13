@@ -20,19 +20,39 @@ public class Tekstikayttoliittyma {
         AudioContext ac = new AudioContext();
         Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
         while (true) {
-            System.out.println("Jos haluat lisätä oskillaattoreita, syötä 1, jos haluat soittaa syötä mitä tahansa muuta");
+            System.out.println("1: syota osc, 2: hiljennä osc, 3: aseta nuotti, 4: soita");
             int syote = Integer.parseInt(lukija.nextLine());
             if (syote == 1) {
                 uusiOskillaattori(syna);
-            } else {
-                break;
+            } else if (syote == 2) {
+                hiljennaOsc(syna);
+            } else if (syote == 3) {
+                asetaNuotti(syna);
+            } else if (syote == 4) {
+                soita(syna);
             }
         }
-        Kontrolleri kontrolleri = new Kontrolleri(syna);
+        //Kontrolleri kontrolleri = new Kontrolleri(syna);
         //huom, ei toimi vielä
-        System.out.println("Paina näppäimistöltä C, D, E, F, G, B tai A soittaaksesi nuotin.");
-   
+        //System.out.println("Paina näppäimistöltä C, D, E, F, G, B tai A soittaaksesi nuotin.");
+
         //System.out.println("jooh elikkäs kiitos käytöstä");
+    }
+
+    public void soita(Syntetisaattorisovellus syna) throws Exception {
+        syna.soita();
+    }
+
+    public void hiljennaOsc(Syntetisaattorisovellus syna) {
+        int oscit = syna.getOskillaattorit().size();
+        System.out.println("Mikä osc hiljennetään? ");
+        for (int i = 1; i <= oscit; i++) {
+            System.out.print(i + ",");
+        }
+        int syote = Integer.parseInt(lukija.nextLine());
+        if (syote <= oscit && syote > 0) {
+            syna.getOskillaattorit().get(syote - 1).poisPaalta();
+        }
     }
 
     public void uusiOskillaattori(Syntetisaattorisovellus syna) {

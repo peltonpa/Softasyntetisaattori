@@ -37,7 +37,7 @@ public class Kontrolleri implements KeyListener {
     public void keyReleased(KeyEvent e) {
         System.out.println("wululuu");
         try {
-            syna.lopeta();
+            //syna.lopeta();
         } catch (Exception ee) {
             System.out.println("Virhe Kontrolleri-luokan keyReleased-metodissa");
         }

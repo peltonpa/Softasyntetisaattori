@@ -18,6 +18,8 @@ public class Oskillaattori {
         this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), Buffer.SINE);
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
+        this.g.addInput(this.aalto);
+        poisPaalta();
     }
 
     public Oskillaattori(AudioContext ac) {
@@ -25,26 +27,26 @@ public class Oskillaattori {
         this.aalto = new WavePlayer(ac, Nuotti.valueOf("C").getTaajuus(), Buffer.SINE);
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
+        this.g.addInput(this.aalto);
+        poisPaalta();
     }
 
     public Oskillaattori(AudioContext ac, String nuotti, Buffer buffer) {
         this.ac = ac;
-        this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), buffer);
+        this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus() / 2, buffer);
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
+        this.g.addInput(this.aalto);
+        poisPaalta();
     }
 
     public Gain getGain() {
         return this.g;
     }
 
-    public void soi() {
-        this.g.addInput(aalto);
-    }
-
     public void asetaNuotti(String nuotti) {
         int taajuus = Nuotti.valueOf(nuotti).getTaajuus();
-        this.aalto.setFrequency(taajuus);
+        this.aalto.setFrequency(taajuus / 2);
     }
 
     public void asetaAaltomuoto(Buffer buffer) {
@@ -62,10 +64,6 @@ public class Oskillaattori {
         }
     }
 
-    public void hiljennaOskillaattori() {
-        this.g.setGain(0);
-    }
-
     public AudioContext getAc() {
         return ac;
     }
@@ -76,6 +74,26 @@ public class Oskillaattori {
 
     public String getKuori() {
         return kuori;
+    }
+
+    public boolean onPaalla() {
+        return !this.g.isPaused();
+    }
+
+    public void poisPaalta() {
+        this.g.pause(true);
+    }
+
+    public void paalle() {
+        this.g.pause(false);
+    }
+    
+    public void onOffKytkin() {
+        if(onPaalla()) {
+            poisPaalta();
+        } else {
+            paalle();
+        }
     }
 
 }

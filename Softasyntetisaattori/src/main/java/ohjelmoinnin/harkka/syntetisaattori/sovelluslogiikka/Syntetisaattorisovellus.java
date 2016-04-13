@@ -20,18 +20,22 @@ public class Syntetisaattorisovellus {
         this.kuori = new Envelope(ac, 500);
         this.oskillaattorit = new ArrayList();
         this.master = new Gain(ac, 1, 1);
+        this.lisaaOskillaattorit();
+    }
+
+    public void lisaaOskillaattorit() {
         this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.SQUARE));
+        this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.NOISE));
+        this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.SINE));
     }
-    
-    public void lisaaOskillaattori(Buffer buffer, String nuotti) {
-        this.oskillaattorit.add(new Oskillaattori(ac, nuotti, buffer));
-    }
-    
+
     public void asetaNuottiKaikille(String nuotti) {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
             this.oskillaattorit.get(i).asetaNuotti(nuotti);
         }
     }
+    
+    
 
     public void soita() throws Exception {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
@@ -39,20 +43,19 @@ public class Syntetisaattorisovellus {
             this.master.addInput(g);
         }
 
-  //      this.kuori.addSegment(1000, 1000);
+        //      this.kuori.addSegment(1000, 1000);
         ac.out.addInput(this.master);
-        soitaKaikkiOskillaattorit();
-        ac.start();
-    }
-    
-    public void lopeta() {
-        ac.stop();
+        soitto();
     }
 
-    public void soitaKaikkiOskillaattorit() {
-        for (int i = 0; i < this.oskillaattorit.size(); i++) {
-            this.oskillaattorit.get(i).soi();
-        }
+    public Oskillaattori haeOskillaattoriIndeksillä(int numero) {
+        return this.oskillaattorit.get(numero);
+    }
+
+    public void soitto() throws Exception {
+        ac.start();
+        Thread.sleep(1000);
+        ac.stop();
     }
 
     public Envelope getKuori() {
@@ -70,6 +73,5 @@ public class Syntetisaattorisovellus {
     public Gain getMaster() {
         return master;
     }
-    
-    
+
 }

@@ -106,9 +106,9 @@ public class OskilaattoriTest {
         osc.lisaaAanenvoimakkuutta();
         osc.lisaaAanenvoimakkuutta();
         osc.lisaaAanenvoimakkuutta();
-        osc.hiljennaOskillaattori();
+        osc.poisPaalta();
         
-        assertEquals(osc.getGain().getGain(), 0, 0.1);
+        assertEquals(osc.onPaalla(), false);
     }
     
     
