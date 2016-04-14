@@ -10,8 +10,8 @@ import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Oskillaattori;
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Syntetisaattorisovellus;
 
 /**
- *
- * @author peltonpa
+ * Syntetisaattorisovelluksen graafinen käyttöliittymä.
+ * 
  */
 public class Gui extends javax.swing.JPanel {
 

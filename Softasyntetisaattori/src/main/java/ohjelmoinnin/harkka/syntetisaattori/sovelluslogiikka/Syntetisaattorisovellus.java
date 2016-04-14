@@ -6,8 +6,18 @@ import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
 import net.beadsproject.beads.ugens.Envelope;
 import net.beadsproject.beads.ugens.Gain;
-import ohjelmoinnin.harkka.syntetisaattori.ohjaus.Kontrolleri;
 
+/**
+ * Varsinainen syntetisaattorin hallinnointiluokka. Tällä asetetaan
+ * oskillaattoreille kulloinenkin nuotti ja käsketään niitä soittamaan se.
+ * Oskillaattori lähettää Syntetisaattorisovelluksen master-gain-oliolle
+ * signaalin, joka välittyy AudioContextille. Soitto()-metodi avaa
+ * AudioContextin, joka kääntää tämän edelleen Javan output-implementaatiolle
+ * joka viimein muuttaa signaalin sähkövirraksi kuulokeulostulossa tai esim.
+ * ulkoisessa äänikortissa (ja tämä sähkövirta väreilee elementeissä jolloin
+ * syntyy ääntä). 
+ * 
+ */
 public class Syntetisaattorisovellus {
 
     private Envelope kuori;

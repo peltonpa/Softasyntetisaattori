@@ -2,6 +2,10 @@ package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
 import net.beadsproject.beads.data.Buffer;
 
+/**
+ * Tämän enum-luokan avulla muutetaan suomenkielisiä aaltomuotoja Beadsin
+ * Buffereiksi
+ */
 public enum Aallonmuoto {
 
     KANTTI(Buffer.SQUARE), KOLMIO(Buffer.TRIANGLE), SINI(Buffer.SINE), KOHINA(Buffer.NOISE), SAHA(Buffer.SAW);

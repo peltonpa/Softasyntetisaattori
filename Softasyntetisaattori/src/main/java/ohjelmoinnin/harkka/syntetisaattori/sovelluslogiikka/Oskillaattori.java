@@ -6,6 +6,17 @@ import net.beadsproject.beads.ugens.Envelope;
 import net.beadsproject.beads.ugens.Gain;
 import net.beadsproject.beads.ugens.WavePlayer;
 
+/**
+ * Tämä luokka on itse äänilähde. Kun Syntetisaattorisovellus-olio luodaan,
+ * saa se samalla 3 oskillaattoria. Oskillaattorilla on 5 eri aaltomuotoa
+ * (ks. Aallonmuoto-enumi).Jokainen oskillaattori tuottaa 
+ * signaalia omalle gainilleen, joka lähettyy eteenpäin Syntetisaattorisovellus-
+ * olion master-gainille. Master-gain taas jatkaa matkaa AudioContextiin,
+ * joka tulkitsee signaalin väreilynä ja passaa eteenpäin Javan audio-outputille
+ * ja lopulta esim. headphone-jackiin tai kaiuttimeen. 
+ * 
+ */
+
 public class Oskillaattori {
 
     private AudioContext ac;
@@ -40,10 +51,20 @@ public class Oskillaattori {
         poisPaalta();
     }
 
+    /**
+     * Tämä metodi palauttaa oskillaattori-olioon liittyvän gain-olion
+     * @return oskillaattori-olioon liittyvä gain-olio 
+     */
     public Gain getGain() {
         return this.g;
     }
 
+    /**
+     * Metodi asettaa oskillaattorin lähettämään signaalia parametrin "nuotti"-
+     * käskemällä taajuudella (nuotti-merkkijono muutetaan Nuotti-enumin avulla
+     * int-muotoiseksi taajuudeksi)
+     * @param nuotti 
+     */
     public void asetaNuotti(String nuotti) {
         int taajuus = Nuotti.valueOf(nuotti).getTaajuus();
         this.aalto.setFrequency(taajuus / 2);

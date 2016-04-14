@@ -17,11 +17,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class OskilaattoriTest {
+public class OskillaattoriTest {
     
     private AudioContext ac = new AudioContext();
     
-    public OskilaattoriTest() {
+    public OskillaattoriTest() {
     }
     
     @BeforeClass

@@ -37,26 +37,15 @@ public class SyntetisaattorisovellusTest {
     }
 
    @Test
-   public void konstruktoriLisaaYhdenOskillaattorin() {
+   public void konstruktoriLisaaKaikkiKolmeOskillaattoria() {
        Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
-       
-       assertEquals(syna.getOskillaattorit().size(), 1);
-   }
-   
-   @Test
-   public void oskillaattorinLisaysLisaaOskillaattorinListaanSyntetisaattorisovellukseen() {
-       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
-       syna.lisaaOskillaattori(Buffer.SINE, "C");
-       syna.lisaaOskillaattori(Buffer.SAW, "F");
-       
+ 
        assertEquals(syna.getOskillaattorit().size(), 3);
    }
    
    @Test 
    public void asetaNuottiKaikilleAsettaaKaikilleSamanNuotin() {
        Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
-       syna.lisaaOskillaattori(Buffer.SINE, "F");
-       syna.lisaaOskillaattori(Buffer.SINE, "G");
        syna.asetaNuottiKaikille("D");
        
        assertEquals(syna.getOskillaattorit().get(0).getAalto().getFrequency(), 294f, 0.1);
