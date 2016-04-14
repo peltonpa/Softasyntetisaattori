@@ -25,6 +25,10 @@ public class Syntetisaattorisovellus {
     private List<Oskillaattori> oskillaattorit;
     private Gain master;
 
+    /**
+     * .
+     * @param ac 
+     */
     public Syntetisaattorisovellus(AudioContext ac) {
         this.ac = ac;
         this.kuori = new Envelope(ac, 500);
@@ -34,38 +38,56 @@ public class Syntetisaattorisovellus {
         alustaAudioContextiinGainit();
     }
 
+    /**
+     * Lisää sovellukseen kolme oskillaattoria siniaalloilla.
+     */
     public void lisaaOskillaattorit() {
-        this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.SQUARE));
-        this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.NOISE));
+        this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.SINE));
+        this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.SINE));
         this.oskillaattorit.add(new Oskillaattori(ac, "C", Buffer.SINE));
     }
 
+    /**
+     * Asettaa nuotti-parametrin määrittämän nuotin kaikille. Nuotti on
+     * merkkijono ja kääntyy int-taajuudeksi (ks. Nuotti-enum).
+     * @param nuotti 
+     */
     public void asetaNuottiKaikille(String nuotti) {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
             this.oskillaattorit.get(i).asetaNuotti(nuotti);
         }
     }
     
-    public void alustaAudioContextiinGainit() {
+    private void alustaAudioContextiinGainit() {
         oskillaattoriInputitMasteriin();
         masterGainAudioContextiin();
     }
     
-    public void oskillaattoriInputitMasteriin() {
+    private void oskillaattoriInputitMasteriin() {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
             Gain g = this.oskillaattorit.get(i).getGain();
             this.master.addInput(g);
         }
     }
     
-    public void masterGainAudioContextiin() {
+    private void masterGainAudioContextiin() {
         this.ac.out.addInput(this.master);
     }
 
-    public Oskillaattori haeOskillaattoriIndeksillä(int numero) {
+    /**
+     * Hakee indeksillä 0-2 oskillaattorin sovelluksen oskillaattoreista.
+     * @param numero indeksinumero
+     * @return palauttaa oskillaattorin indeksillä 0-2.
+     */
+    public Oskillaattori haeOskillaattoriIndeksilla(int numero) {
         return this.oskillaattorit.get(numero);
     }
 
+    /**
+     * Avaa AudioContext-olion jolloin kuulokeliitännästä pitäisi
+     * kuulua ääntä (olettaen, että oskillaattorit ovat päällä).
+     * @throws Exception 
+     */
     public void soitto() throws Exception {
         ac.start();
         Thread.sleep(1000);

@@ -61,9 +61,9 @@ public class SyntetisaattorisovellusTest {
    }
    
    @Test
-   public void haeOskillaattoriIndeksilläToimii() {
+   public void haeOskillaattoriIndeksillaToimii() {
        Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
-       Oskillaattori osc = syna.haeOskillaattoriIndeksillä(2);
+       Oskillaattori osc = syna.haeOskillaattoriIndeksilla(2);
        
        assertNotNull(osc);
    }

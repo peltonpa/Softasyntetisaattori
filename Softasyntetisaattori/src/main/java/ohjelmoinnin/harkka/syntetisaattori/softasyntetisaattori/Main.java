@@ -14,6 +14,11 @@ import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Syntetisaattorisovel
  */
 public class Main {
 
+    /**
+     * Käynnistää ohjelman.
+     * @param args Argumentit
+     * @throws Exception 
+     */
     public static void main(String[] args) throws Exception {
         //Tekstikayttoliittyma tl = new Tekstikayttoliittyma(new Scanner(System.in));
         //tl.kaynnista();

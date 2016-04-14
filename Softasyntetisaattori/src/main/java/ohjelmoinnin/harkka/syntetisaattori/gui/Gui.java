@@ -469,7 +469,7 @@ public class Gui extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void onOff(int numero) {
-        Oskillaattori osc = this.syna.haeOskillaattoriIndeksillä(numero);
+        Oskillaattori osc = this.syna.haeOskillaattoriIndeksilla(numero);
         osc.onOffKytkin();
     }
 

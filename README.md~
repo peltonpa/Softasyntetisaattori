@@ -12,4 +12,4 @@ Yksinkertainen ääntä tuottava ohjelma Javalla (4. periodin Ohjelmoinnin harkk
 
 [PIT-raportti](https://htmlpreview.github.io/?https://github.com/peltonpa/Softasyntetisaattori/blob/master/dokumentaatio/pit/201604081755/index.html)
 
-[JavaDoc](dokumentaatio/JavaDoc/help-doc.html)
+[JavaDoc](https://htmlpreview.github.io/?https://raw.githubusercontent.com/peltonpa/Softasyntetisaattori/master/dokumentaatio/JavaDoc/index.html?help-doc.html)

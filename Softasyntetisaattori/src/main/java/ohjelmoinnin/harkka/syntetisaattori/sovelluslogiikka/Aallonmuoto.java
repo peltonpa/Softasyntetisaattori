@@ -4,7 +4,7 @@ import net.beadsproject.beads.data.Buffer;
 
 /**
  * Tämän enum-luokan avulla muutetaan suomenkielisiä aaltomuotoja Beadsin
- * Buffereiksi
+ * Buffereiksi.
  */
 public enum Aallonmuoto {
 

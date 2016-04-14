@@ -24,6 +24,11 @@ public class Oskillaattori {
     private Gain g;
     private String kuori;
 
+    /**
+     * .
+     * @param ac AudioContext-olio
+     * @param nuotti 
+     */
     public Oskillaattori(AudioContext ac, String nuotti) {
         this.ac = ac;
         this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), Buffer.SINE);
@@ -33,6 +38,10 @@ public class Oskillaattori {
         poisPaalta();
     }
 
+    /**
+     * .
+     * @param ac AudioContext-olio
+     */
     public Oskillaattori(AudioContext ac) {
         this.ac = ac;
         this.aalto = new WavePlayer(ac, Nuotti.valueOf("C").getTaajuus(), Buffer.SINE);
@@ -42,6 +51,12 @@ public class Oskillaattori {
         poisPaalta();
     }
 
+    /**
+     * .
+     * @param ac AudioContext-olio
+     * @param nuotti nuotti merkkijonona
+     * @param buffer ääniaaltobufferi
+     */
     public Oskillaattori(AudioContext ac, String nuotti, Buffer buffer) {
         this.ac = ac;
         this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), buffer);
@@ -52,8 +67,8 @@ public class Oskillaattori {
     }
 
     /**
-     * Tämä metodi palauttaa oskillaattori-olioon liittyvän gain-olion
-     * @return oskillaattori-olioon liittyvä gain-olio 
+     * Tämä metodi palauttaa oskillaattori-olioon liittyvän gain-olion.
+     * @return oskillaattori-olioon liittyvä gain-olio.
      */
     public Gain getGain() {
         return this.g;
@@ -62,22 +77,32 @@ public class Oskillaattori {
     /**
      * Metodi asettaa oskillaattorin lähettämään signaalia parametrin "nuotti"-
      * käskemällä taajuudella (nuotti-merkkijono muutetaan Nuotti-enumin avulla
-     * int-muotoiseksi taajuudeksi)
-     * @param nuotti 
+     * int-muotoiseksi taajuudeksi).
+     * @param nuotti nuotti merkkijonoesityksenä
      */
     public void asetaNuotti(String nuotti) {
         int taajuus = Nuotti.valueOf(nuotti).getTaajuus();
         this.aalto.setFrequency(taajuus);
     }
 
+    /**
+     * .
+     * @param buffer ääniaaltobufferi
+     */
     public void asetaAaltomuoto(Buffer buffer) {
         this.aalto.setBuffer(buffer);
     }
 
+    /**
+     * .
+     */
     public void lisaaAanenvoimakkuutta() {
         this.g.setGain(this.g.getGain() + 1);
     }
 
+    /**
+     * .
+     */
     public void laskeAanenvoimakkuutta() {
         this.g.setGain(this.g.getGain() - 1);
         if (this.g.getGain() < 0) {
@@ -97,20 +122,35 @@ public class Oskillaattori {
         return kuori;
     }
 
+    /**
+     * Tarkistaa, onko oskillaattori päällä. 
+     * @return true, jos päällä, false jos pois päältä.
+     */
     public boolean onPaalla() {
         return !this.g.isPaused();
     }
 
+    /**
+     * Laittaa oskillaattorin pois päältä.
+     */
     public void poisPaalta() {
         this.g.pause(true);
     }
 
+    /**
+     * Laittaa oskillaattorin päälle.
+     */
     public void paalle() {
         this.g.pause(false);
     }
     
+    /**
+     * Metodi ikään kuin kääntää on-off-kytkintä: jos oskillaattori ei ole 
+     * päällä, tämän jälkeen se on. Toisaalta jos se oli pois päältä,
+     * menee se päälle.
+     */
     public void onOffKytkin() {
-        if(onPaalla()) {
+        if (onPaalla()) {
             poisPaalta();
         } else {
             paalle();
