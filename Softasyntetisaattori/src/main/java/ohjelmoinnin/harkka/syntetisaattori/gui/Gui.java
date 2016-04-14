@@ -398,9 +398,9 @@ public class Gui extends javax.swing.JPanel {
 
     private void SoittonappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SoittonappiActionPerformed
         try {
-            this.syna.soita();
+            this.syna.soitto();
         } catch (Exception e) {
-            System.out.println("Soita-metodissa errori");
+            System.out.println("Soitto-metodissa errori");
         }
     }//GEN-LAST:event_SoittonappiActionPerformed
 

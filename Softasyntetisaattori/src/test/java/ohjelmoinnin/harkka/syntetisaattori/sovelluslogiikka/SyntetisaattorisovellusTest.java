@@ -43,6 +43,13 @@ public class SyntetisaattorisovellusTest {
        assertEquals(syna.getOskillaattorit().size(), 3);
    }
    
+   @Test
+   public void konstruktoriInitialisoiOskillaattorienGainitMasteriinJaMasterinAudioContextiin() {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       
+       assertEquals(syna.getMaster().getNumberOfConnectedUGens(0), 3);
+   }
+   
    @Test 
    public void asetaNuottiKaikilleAsettaaKaikilleSamanNuotin() {
        Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
@@ -51,6 +58,14 @@ public class SyntetisaattorisovellusTest {
        assertEquals(syna.getOskillaattorit().get(0).getAalto().getFrequency(), 294f, 0.1);
        assertEquals(syna.getOskillaattorit().get(1).getAalto().getFrequency(), 294f, 0.1);
        assertEquals(syna.getOskillaattorit().get(2).getAalto().getFrequency(), 294f, 0.1);
+   }
+   
+   @Test
+   public void haeOskillaattoriIndeksilläToimii() {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       Oskillaattori osc = syna.haeOskillaattoriIndeksillä(2);
+       
+       assertNotNull(osc);
    }
    
 }

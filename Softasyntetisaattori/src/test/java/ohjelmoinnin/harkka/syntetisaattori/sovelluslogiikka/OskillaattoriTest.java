@@ -111,6 +111,23 @@ public class OskillaattoriTest {
         assertEquals(osc.onPaalla(), false);
     }
     
+    @Test
+    public void OnOffKytkinToimii() {
+        Oskillaattori osc = new Oskillaattori(ac);
+        osc.onOffKytkin();
+        
+        assertEquals(osc.onPaalla(), true);
+    }
+    
+    @Test
+    public void poisPaaltaToimii() {
+        Oskillaattori osc = new Oskillaattori(ac);
+        osc.onOffKytkin();
+        osc.poisPaalta();
+        
+        assertEquals(osc.onPaalla(), false);
+    }
+    
     
     
 }

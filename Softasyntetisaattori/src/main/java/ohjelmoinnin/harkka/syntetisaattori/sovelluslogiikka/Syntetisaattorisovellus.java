@@ -30,7 +30,8 @@ public class Syntetisaattorisovellus {
         this.kuori = new Envelope(ac, 500);
         this.oskillaattorit = new ArrayList();
         this.master = new Gain(ac, 1, 1);
-        this.lisaaOskillaattorit();
+        lisaaOskillaattorit();
+        alustaAudioContextiinGainit();
     }
 
     public void lisaaOskillaattorit() {
@@ -45,17 +46,20 @@ public class Syntetisaattorisovellus {
         }
     }
     
+    public void alustaAudioContextiinGainit() {
+        oskillaattoriInputitMasteriin();
+        masterGainAudioContextiin();
+    }
     
-
-    public void soita() throws Exception {
+    public void oskillaattoriInputitMasteriin() {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
             Gain g = this.oskillaattorit.get(i).getGain();
             this.master.addInput(g);
         }
-
-        //      this.kuori.addSegment(1000, 1000);
-        ac.out.addInput(this.master);
-        soitto();
+    }
+    
+    public void masterGainAudioContextiin() {
+        this.ac.out.addInput(this.master);
     }
 
     public Oskillaattori haeOskillaattoriIndeksillä(int numero) {

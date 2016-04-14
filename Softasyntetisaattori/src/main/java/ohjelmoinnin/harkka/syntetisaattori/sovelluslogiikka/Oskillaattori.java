@@ -44,7 +44,7 @@ public class Oskillaattori {
 
     public Oskillaattori(AudioContext ac, String nuotti, Buffer buffer) {
         this.ac = ac;
-        this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus() / 2, buffer);
+        this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), buffer);
         this.g = new Gain(ac, 1, 1);
         this.kuori = kuori;
         this.g.addInput(this.aalto);
@@ -67,7 +67,7 @@ public class Oskillaattori {
      */
     public void asetaNuotti(String nuotti) {
         int taajuus = Nuotti.valueOf(nuotti).getTaajuus();
-        this.aalto.setFrequency(taajuus / 2);
+        this.aalto.setFrequency(taajuus);
     }
 
     public void asetaAaltomuoto(Buffer buffer) {
