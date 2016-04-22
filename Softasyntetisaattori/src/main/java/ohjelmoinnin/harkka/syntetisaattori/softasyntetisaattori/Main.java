@@ -1,5 +1,6 @@
 package ohjelmoinnin.harkka.syntetisaattori.softasyntetisaattori;
 
+import ohjelmoinnin.harkka.syntetisaattori.ohjain.Kontrolleri;
 import ohjelmoinnin.harkka.syntetisaattori.gui.Gui;
 import java.util.Scanner;
 import javax.swing.JFrame;
@@ -27,8 +28,10 @@ public class Main {
         JFrame jf = new JFrame();
         
         jf.add(gui);
+        jf.addKeyListener(new Kontrolleri(syna));
         jf.pack();
         jf.setVisible(true);
+        jf.requestFocus();
     }
 
 }

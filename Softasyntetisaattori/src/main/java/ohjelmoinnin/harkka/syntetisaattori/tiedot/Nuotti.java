@@ -1,4 +1,4 @@
-package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
+package ohjelmoinnin.harkka.syntetisaattori.tiedot;
 
 /**
  * Tämä enum-luokka muuttaa kirjaimia (CDEFGBA) taajuuksiksi, joilla kyseiset

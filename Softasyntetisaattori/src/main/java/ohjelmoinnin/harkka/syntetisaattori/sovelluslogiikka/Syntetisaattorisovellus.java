@@ -90,7 +90,15 @@ public class Syntetisaattorisovellus {
      */
     public void soitto() throws Exception {
         ac.start();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
+        ac.stop();
+    }
+    
+    /**
+     * Hiljentää äänen ulostulon.
+     * @throws Exception 
+     */
+    public void hiljenna() throws Exception {
         ac.stop();
     }
 

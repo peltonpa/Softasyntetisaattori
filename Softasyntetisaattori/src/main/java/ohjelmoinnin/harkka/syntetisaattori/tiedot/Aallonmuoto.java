@@ -1,4 +1,4 @@
-package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
+package ohjelmoinnin.harkka.syntetisaattori.tiedot;
 
 import net.beadsproject.beads.data.Buffer;
 

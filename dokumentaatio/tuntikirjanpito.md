@@ -11,3 +11,5 @@ Päivä | Tunnit | Kuvaus
 11.04.2016 | 2h | Graafisen käyttöliittymän aloitus
 13.04.2016 | 6h | Graafisen käyttöliittymän kunnostus
 14.04.2016 | 3h | Viikkoraporttien generointi, JavaDocin luonti ja Checkstyle-virheiden korjaus
+19.04.2016 | 2h | Kontrolleri ja gui
+21.04.2016 | 1h | Kontrolleri ja gui

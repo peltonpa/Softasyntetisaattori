@@ -1,33 +1,38 @@
 package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
+import java.util.HashMap;
+import java.util.Map;
+import ohjelmoinnin.harkka.syntetisaattori.tiedot.Nuotti;
 import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
 import net.beadsproject.beads.ugens.Envelope;
 import net.beadsproject.beads.ugens.Gain;
 import net.beadsproject.beads.ugens.WavePlayer;
+import ohjelmoinnin.harkka.syntetisaattori.tiedot.Taajuudet;
 
 /**
- * Tämä luokka on itse äänilähde. Kun Syntetisaattorisovellus-olio luodaan,
- * saa se samalla 3 oskillaattoria. Oskillaattorilla on 5 eri aaltomuotoa
- * (ks. Aallonmuoto-enumi).Jokainen oskillaattori tuottaa 
- * signaalia omalle gainilleen, joka lähettyy eteenpäin Syntetisaattorisovellus-
- * olion master-gainille. Master-gain taas jatkaa matkaa AudioContextiin,
- * joka tulkitsee signaalin väreilynä ja passaa eteenpäin Javan audio-outputille
- * ja lopulta esim. headphone-jackiin tai kaiuttimeen. 
- * 
+ * Tämä luokka on itse äänilähde. Kun Syntetisaattorisovellus-olio luodaan, saa
+ * se samalla 3 oskillaattoria. Oskillaattorilla on 5 eri aaltomuotoa (ks.
+ * Aallonmuoto-enumi).Jokainen oskillaattori tuottaa signaalia omalle
+ * gainilleen, joka lähettyy eteenpäin Syntetisaattorisovellus- olion
+ * master-gainille. Master-gain taas jatkaa matkaa AudioContextiin, joka
+ * tulkitsee signaalin väreilynä ja passaa eteenpäin Javan audio-outputille ja
+ * lopulta esim. headphone-jackiin tai kaiuttimeen.
+ *
  */
-
 public class Oskillaattori {
 
     private AudioContext ac;
     private WavePlayer aalto;
     private Gain g;
     private String kuori;
+    private Map<String, Float> taajuuskartta;
+    private int oktaavi;
 
     /**
      * .
      * @param ac AudioContext-olio
-     * @param nuotti 
+     * @param nuotti alustettava nuotti
      */
     public Oskillaattori(AudioContext ac, String nuotti) {
         this.ac = ac;
@@ -36,6 +41,9 @@ public class Oskillaattori {
         this.kuori = kuori;
         this.g.addInput(this.aalto);
         poisPaalta();
+        this.taajuuskartta = new Taajuudet().getTaajuuskartta();
+        this.oktaavi = 4;
+        asetaNuotti(nuotti);
     }
 
     /**
@@ -49,6 +57,8 @@ public class Oskillaattori {
         this.kuori = kuori;
         this.g.addInput(this.aalto);
         poisPaalta();
+        this.taajuuskartta = new Taajuudet().getTaajuuskartta();
+        this.oktaavi = 4;
     }
 
     /**
@@ -64,10 +74,14 @@ public class Oskillaattori {
         this.kuori = kuori;
         this.g.addInput(this.aalto);
         poisPaalta();
+        this.taajuuskartta = new Taajuudet().getTaajuuskartta();
+        this.oktaavi = 4;
+        asetaNuotti(nuotti);
     }
 
     /**
      * Tämä metodi palauttaa oskillaattori-olioon liittyvän gain-olion.
+     *
      * @return oskillaattori-olioon liittyvä gain-olio.
      */
     public Gain getGain() {
@@ -78,10 +92,12 @@ public class Oskillaattori {
      * Metodi asettaa oskillaattorin lähettämään signaalia parametrin "nuotti"-
      * käskemällä taajuudella (nuotti-merkkijono muutetaan Nuotti-enumin avulla
      * int-muotoiseksi taajuudeksi).
+     *
      * @param nuotti nuotti merkkijonoesityksenä
      */
     public void asetaNuotti(String nuotti) {
-        int taajuus = Nuotti.valueOf(nuotti).getTaajuus();
+        nuotti += Integer.toString(this.oktaavi);
+        float taajuus = this.taajuuskartta.get(nuotti);
         this.aalto.setFrequency(taajuus);
     }
 
@@ -123,7 +139,8 @@ public class Oskillaattori {
     }
 
     /**
-     * Tarkistaa, onko oskillaattori päällä. 
+     * Tarkistaa, onko oskillaattori päällä.
+     *
      * @return true, jos päällä, false jos pois päältä.
      */
     public boolean onPaalla() {
@@ -143,11 +160,11 @@ public class Oskillaattori {
     public void paalle() {
         this.g.pause(false);
     }
-    
+
     /**
-     * Metodi ikään kuin kääntää on-off-kytkintä: jos oskillaattori ei ole 
-     * päällä, tämän jälkeen se on. Toisaalta jos se oli pois päältä,
-     * menee se päälle.
+     * Metodi ikään kuin kääntää on-off-kytkintä: jos oskillaattori ei ole
+     * päällä, tämän jälkeen se on. Toisaalta jos se oli pois päältä, menee se
+     * päälle.
      */
     public void onOffKytkin() {
         if (onPaalla()) {
@@ -157,4 +174,27 @@ public class Oskillaattori {
         }
     }
 
+    /**
+     * Nostaa oktaavia yhdellä pykälällä (max. 5).
+     */
+    public void nostaOktaavia() {
+        this.oktaavi++;
+        if (this.oktaavi > 5) {
+            this.oktaavi = 5;
+        }
+    }
+
+    /**
+     * Laskee oktaavia yhdellä pykälällä (min. 1).
+     */
+    public void laskeOktaavia() {
+        this.oktaavi--;
+        if (this.oktaavi < 1) {
+            this.oktaavi = 1;
+        }
+    }
+
+    public int getOktaavi() {
+        return oktaavi;
+    }
 }

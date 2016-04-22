@@ -2,9 +2,12 @@ package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
 
 
 
+import java.util.HashMap;
+import java.util.Map;
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Syntetisaattorisovellus;
 import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
+import ohjelmoinnin.harkka.syntetisaattori.tiedot.Taajuudet;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -55,9 +58,9 @@ public class SyntetisaattorisovellusTest {
        Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
        syna.asetaNuottiKaikille("D");
        
-       assertEquals(syna.getOskillaattorit().get(0).getAalto().getFrequency(), 294f, 0.1);
-       assertEquals(syna.getOskillaattorit().get(1).getAalto().getFrequency(), 294f, 0.1);
-       assertEquals(syna.getOskillaattorit().get(2).getAalto().getFrequency(), 294f, 0.1);
+       assertEquals(syna.getOskillaattorit().get(0).getAalto().getFrequency(), 587.2f, 1);
+       assertEquals(syna.getOskillaattorit().get(1).getAalto().getFrequency(), 587.2f, 1);
+       assertEquals(syna.getOskillaattorit().get(2).getAalto().getFrequency(), 587.2f, 1);
    }
    
    @Test

@@ -51,7 +51,7 @@ public class OskillaattoriTest {
     public void konstruktoriAsettaaOikeanNuotin() {
         Oskillaattori osc = new Oskillaattori(ac, "G");
         
-        assertEquals(osc.getAalto().getFrequency(), 392f, 0.1);
+        assertEquals(osc.getAalto().getFrequency(), 784f, 1);
     }
     
     @Test
@@ -67,7 +67,7 @@ public class OskillaattoriTest {
         Oskillaattori osc = new Oskillaattori(ac, "C");
         osc.asetaNuotti("F");
         
-        assertEquals(osc.getAalto().getFrequency(), 349f, 0.1);
+        assertEquals(osc.getAalto().getFrequency(), 699f, 1);
     }
     
     @Test
