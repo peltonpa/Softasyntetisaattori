@@ -19,20 +19,21 @@ public class Kontrolleri implements KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {
         try {
-            System.out.println("juu");
+         
         } catch (Exception ee) {
-            System.out.println("buu");
+            
         }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("kirjain: " + e.getKeyChar());
+      // System.out.println("kirjain: " + e.getKeyChar());
         try {
             String soitettava = "" + e.getKeyChar();
-            soitettava.toUpperCase();
+            soitettava = soitettava.toUpperCase();
+            System.out.println("soitettava: " + soitettava);
             String nuotti = soitettava(soitettava);
-            if (!nuotti.equals("EI")) {
+            if (!(nuotti.equals("EI"))) {
                 syna.asetaNuottiKaikille(nuotti);
             }
             syna.soitto();

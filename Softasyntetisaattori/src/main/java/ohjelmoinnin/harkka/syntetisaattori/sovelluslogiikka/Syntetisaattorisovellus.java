@@ -90,8 +90,8 @@ public class Syntetisaattorisovellus {
      */
     public void soitto() throws Exception {
         ac.start();
-        Thread.sleep(3000);
-        ac.stop();
+//        Thread.sleep(3000);
+//        ac.stop();
     }
     
     /**

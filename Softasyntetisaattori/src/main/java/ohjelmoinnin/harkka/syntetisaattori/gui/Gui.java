@@ -5,7 +5,9 @@
  */
 package ohjelmoinnin.harkka.syntetisaattori.gui;
 
+import javax.swing.JFrame;
 import net.beadsproject.beads.data.Buffer;
+import ohjelmoinnin.harkka.syntetisaattori.ohjain.Kontrolleri;
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Oskillaattori;
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Syntetisaattorisovellus;
 
@@ -19,10 +21,26 @@ public class Gui extends javax.swing.JPanel {
      * Creates new form Gui
      */
     private Syntetisaattorisovellus syna;
+    private JFrame freimi;
 
-    public Gui(Syntetisaattorisovellus syna) {
+    public Gui(Syntetisaattorisovellus syna, JFrame freimi) {
         this.syna = syna;
+        this.freimi = freimi;
         initComponents();
+        jLayeredPane2.setLayer(jButton16, 30);
+        jButton14.setRequestFocusEnabled(false);
+        //jButton14.setRolloverEnabled(false);
+        jButton17.setRequestFocusEnabled(false);
+        //jButton17.setRolloverEnabled(false);
+        jButton14.setFocusPainted(false);
+        jButton17.setFocusPainted(false);
+        jButton14.setIgnoreRepaint(true);
+        jButton17.setIgnoreRepaint(true);
+        jLayeredPane2.setLayer(jButton14, 2);
+        jLayeredPane2.setLayer(jButton17, 2);
+        jLayeredPane2.setLayer(jButton26, 30);
+        jLayeredPane2.setLayer(jButton27, 30);
+        jLayeredPane2.setLayer(jButton28, 30);
     }
 
     /**
@@ -40,6 +58,22 @@ public class Gui extends javax.swing.JPanel {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        jButton12 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jLayeredPane2 = new javax.swing.JLayeredPane();
+        jButton16 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
         jLabelOsc2 = new javax.swing.JLabel();
         jLabelOsc1 = new javax.swing.JLabel();
         jLabelOsc3 = new javax.swing.JLabel();
@@ -85,6 +119,306 @@ public class Gui extends javax.swing.JPanel {
         osc2Sini.setSelected(true);
 
         osc3Sini.setSelected(true);
+
+        jButton12.setBackground(new java.awt.Color(255, 255, 255));
+        jButton12.setForeground(new java.awt.Color(60, 63, 65));
+        jButton12.setText("C");
+        jButton12.setToolTipText("C");
+
+        jButton20.setBackground(new java.awt.Color(255, 255, 255));
+        jButton20.setForeground(new java.awt.Color(60, 63, 65));
+        jButton20.setText("C");
+        jButton20.setToolTipText("C");
+        jButton20.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jButton15.setBackground(new java.awt.Color(0, 0, 0));
+        jButton15.setForeground(new java.awt.Color(60, 63, 65));
+        jButton15.setText("C");
+        jButton15.setToolTipText("C");
+
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton16.setBackground(new java.awt.Color(0, 0, 0));
+        jButton16.setForeground(new java.awt.Color(60, 63, 65));
+        jButton16.setText("C");
+        jButton16.setToolTipText("C");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton16MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton16MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 20, 40));
+
+        jButton14.setBackground(new java.awt.Color(255, 255, 255));
+        jButton14.setForeground(new java.awt.Color(60, 63, 65));
+        jButton14.setText("C");
+        jButton14.setToolTipText("C");
+        jButton14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton14.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton14StateChanged(evt);
+            }
+        });
+        jButton14.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton14MouseMoved(evt);
+            }
+        });
+        jButton14.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton14FocusGained(evt);
+            }
+        });
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton14MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton14MouseReleased(evt);
+            }
+        });
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jLayeredPane2.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 20, 80));
+
+        jButton17.setBackground(new java.awt.Color(255, 255, 255));
+        jButton17.setForeground(new java.awt.Color(60, 63, 65));
+        jButton17.setText("C");
+        jButton17.setToolTipText("C");
+        jButton17.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton17StateChanged(evt);
+            }
+        });
+        jButton17.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton17MouseMoved(evt);
+            }
+        });
+        jButton17.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton17FocusGained(evt);
+            }
+        });
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton17MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton17MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 20, 80));
+
+        jButton21.setBackground(new java.awt.Color(0, 0, 0));
+        jButton21.setForeground(new java.awt.Color(60, 63, 65));
+        jButton21.setText("C");
+        jButton21.setToolTipText("C");
+        jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton21MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton21MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 20, 40));
+
+        jButton18.setBackground(new java.awt.Color(255, 255, 255));
+        jButton18.setForeground(new java.awt.Color(60, 63, 65));
+        jButton18.setText("C");
+        jButton18.setToolTipText("C");
+        jButton18.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton18StateChanged(evt);
+            }
+        });
+        jButton18.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton18MouseMoved(evt);
+            }
+        });
+        jButton18.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton18FocusGained(evt);
+            }
+        });
+        jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton18MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton18MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 20, 80));
+
+        jButton22.setBackground(new java.awt.Color(255, 255, 255));
+        jButton22.setForeground(new java.awt.Color(60, 63, 65));
+        jButton22.setText("C");
+        jButton22.setToolTipText("C");
+        jButton22.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton22StateChanged(evt);
+            }
+        });
+        jButton22.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton22MouseMoved(evt);
+            }
+        });
+        jButton22.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton22FocusGained(evt);
+            }
+        });
+        jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton22MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton22MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 20, 80));
+
+        jButton23.setBackground(new java.awt.Color(255, 255, 255));
+        jButton23.setForeground(new java.awt.Color(60, 63, 65));
+        jButton23.setText("C");
+        jButton23.setToolTipText("C");
+        jButton23.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton23StateChanged(evt);
+            }
+        });
+        jButton23.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton23MouseMoved(evt);
+            }
+        });
+        jButton23.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton23FocusGained(evt);
+            }
+        });
+        jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton23MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton23MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 20, 80));
+
+        jButton24.setBackground(new java.awt.Color(255, 255, 255));
+        jButton24.setForeground(new java.awt.Color(60, 63, 65));
+        jButton24.setText("C");
+        jButton24.setToolTipText("C");
+        jButton24.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton24StateChanged(evt);
+            }
+        });
+        jButton24.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton24MouseMoved(evt);
+            }
+        });
+        jButton24.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton24FocusGained(evt);
+            }
+        });
+        jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton24MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton24MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 20, 80));
+
+        jButton25.setBackground(new java.awt.Color(255, 255, 255));
+        jButton25.setForeground(new java.awt.Color(60, 63, 65));
+        jButton25.setText("C");
+        jButton25.setToolTipText("C");
+        jButton25.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton25StateChanged(evt);
+            }
+        });
+        jButton25.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton25MouseMoved(evt);
+            }
+        });
+        jButton25.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton25FocusGained(evt);
+            }
+        });
+        jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton25MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton25MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 20, 80));
+
+        jButton27.setBackground(new java.awt.Color(0, 0, 0));
+        jButton27.setForeground(new java.awt.Color(60, 63, 65));
+        jButton27.setText("C");
+        jButton27.setToolTipText("C");
+        jButton27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton27MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton27MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 20, 40));
+
+        jButton26.setBackground(new java.awt.Color(0, 0, 0));
+        jButton26.setForeground(new java.awt.Color(60, 63, 65));
+        jButton26.setText("C");
+        jButton26.setToolTipText("C");
+        jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton26MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton26MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 20, 40));
+
+        jButton28.setBackground(new java.awt.Color(0, 0, 0));
+        jButton28.setForeground(new java.awt.Color(60, 63, 65));
+        jButton28.setText("C");
+        jButton28.setToolTipText("C");
+        jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton28MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton28MouseReleased(evt);
+            }
+        });
+        jLayeredPane2.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 20, 40));
 
         jLabelOsc2.setText("Osc2");
 
@@ -319,75 +653,81 @@ public class Gui extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Soittonappi)
                 .addGap(58, 58, 58)
                 .addComponent(Lopetusnappi)
-                .addContainerGap())
+                .addGap(219, 219, 219))
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(osc1OnOff)
-                        .addGap(58, 58, 58)
-                        .addComponent(jLabelOsc2))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(osc1Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc1Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc1Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                        .addComponent(osc1Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc1Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(oktaavilabel)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(osc2OnOff)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                        .addComponent(jLabelOsc3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(oktaavilabel1)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4))
+                                .addComponent(osc1OnOff)
+                                .addGap(58, 58, 58)
+                                .addComponent(jLabelOsc2))
+                            .addComponent(oktaavilabel)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(osc2Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc2Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc2Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc2Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc2Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(osc3OnOff)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(osc3Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc3Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc3Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc3Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(osc3Kohina, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(oktaavilabel2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton5)
+                                .addComponent(osc1Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc1Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc1Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                                .addComponent(osc1Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc1Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(osc2OnOff)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                                .addComponent(jLabelOsc3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(oktaavilabel1)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton4))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(osc2Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc2Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc2Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc2Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc2Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(osc3OnOff)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(osc3Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc3Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc3Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc3Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(osc3Kohina, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(oktaavilabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton6))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)))
                 .addGap(17, 17, 17))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(24, 24, 24)
                     .addComponent(jLabelOsc1)
-                    .addContainerGap(474, Short.MAX_VALUE)))
+                    .addContainerGap(491, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(osc1OnOff)
@@ -447,7 +787,9 @@ public class Gui extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton5)
                             .addComponent(jButton6))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Lopetusnappi)
                     .addComponent(Soittonappi))
@@ -456,7 +798,7 @@ public class Gui extends javax.swing.JPanel {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(24, 24, 24)
                     .addComponent(jLabelOsc1)
-                    .addContainerGap(319, Short.MAX_VALUE)))
+                    .addContainerGap(398, Short.MAX_VALUE)))
         );
 
         osc3Sini.setSelected(true);
@@ -488,62 +830,77 @@ public class Gui extends javax.swing.JPanel {
 
     private void osc1SiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc1SiniActionPerformed
         this.syna.getOskillaattorit().get(0).asetaAaltomuoto(Buffer.SINE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc1SiniActionPerformed
 
     private void osc1SahaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc1SahaActionPerformed
         this.syna.getOskillaattorit().get(0).asetaAaltomuoto(Buffer.SAW);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc1SahaActionPerformed
 
     private void osc1KanttiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc1KanttiActionPerformed
         this.syna.getOskillaattorit().get(0).asetaAaltomuoto(Buffer.SQUARE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc1KanttiActionPerformed
 
     private void osc1KolmioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc1KolmioActionPerformed
         this.syna.getOskillaattorit().get(0).asetaAaltomuoto(Buffer.TRIANGLE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc1KolmioActionPerformed
 
     private void osc1KohinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc1KohinaActionPerformed
         this.syna.getOskillaattorit().get(0).asetaAaltomuoto(Buffer.NOISE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc1KohinaActionPerformed
 
     private void osc2KanttiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc2KanttiActionPerformed
         this.syna.getOskillaattorit().get(1).asetaAaltomuoto(Buffer.SQUARE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc2KanttiActionPerformed
 
     private void osc2KolmioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc2KolmioActionPerformed
         this.syna.getOskillaattorit().get(1).asetaAaltomuoto(Buffer.TRIANGLE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc2KolmioActionPerformed
 
     private void osc2KohinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc2KohinaActionPerformed
         this.syna.getOskillaattorit().get(1).asetaAaltomuoto(Buffer.NOISE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc2KohinaActionPerformed
 
     private void osc2SiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc2SiniActionPerformed
         this.syna.getOskillaattorit().get(1).asetaAaltomuoto(Buffer.SINE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc2SiniActionPerformed
 
     private void osc2SahaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc2SahaActionPerformed
         this.syna.getOskillaattorit().get(1).asetaAaltomuoto(Buffer.SAW);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc2SahaActionPerformed
 
     private void osc3SahaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc3SahaActionPerformed
         this.syna.getOskillaattorit().get(2).asetaAaltomuoto(Buffer.SAW);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc3SahaActionPerformed
 
     private void osc3KolmioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc3KolmioActionPerformed
         this.syna.getOskillaattorit().get(2).asetaAaltomuoto(Buffer.TRIANGLE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc3KolmioActionPerformed
 
     private void osc3KanttiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc3KanttiActionPerformed
         this.syna.getOskillaattorit().get(2).asetaAaltomuoto(Buffer.SQUARE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc3KanttiActionPerformed
 
     private void osc3KohinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc3KohinaActionPerformed
         this.syna.getOskillaattorit().get(2).asetaAaltomuoto(Buffer.NOISE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc3KohinaActionPerformed
 
     private void osc3SiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc3SiniActionPerformed
         this.syna.getOskillaattorit().get(2).asetaAaltomuoto(Buffer.SINE);
+        this.freimi.requestFocus();
     }//GEN-LAST:event_osc3SiniActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -560,26 +917,32 @@ public class Gui extends javax.swing.JPanel {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         this.syna.haeOskillaattoriIndeksilla(0).laskeOktaavia();
+        this.freimi.requestFocus();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         this.syna.haeOskillaattoriIndeksilla(0).nostaOktaavia();
+        this.freimi.requestFocus();
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         this.syna.haeOskillaattoriIndeksilla(1).laskeOktaavia();
+        this.freimi.requestFocus();
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         this.syna.haeOskillaattoriIndeksilla(1).nostaOktaavia();
+        this.freimi.requestFocus();
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         this.syna.haeOskillaattoriIndeksilla(2).laskeOktaavia();
+        this.freimi.requestFocus();
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         this.syna.haeOskillaattoriIndeksilla(2).nostaOktaavia();
+        this.freimi.requestFocus();
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void SoittonappiMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SoittonappiMouseReleased
@@ -590,9 +953,205 @@ public class Gui extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_SoittonappiMouseReleased
 
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+
+        jButton16.repaint();
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton14MouseReleased
+
+    private void jButton14FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton14FocusGained
+        jButton16.repaint();
+    }//GEN-LAST:event_jButton14FocusGained
+
+    private void jButton14MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseMoved
+        jButton16.repaint();
+    }//GEN-LAST:event_jButton14MouseMoved
+
+    private void jButton14StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton14StateChanged
+        jButton16.repaint();
+    }//GEN-LAST:event_jButton14StateChanged
+
+    private void jButton14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MousePressed
+        soitaNuotti("C");
+    }//GEN-LAST:event_jButton14MousePressed
+
+    private void jButton18MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MousePressed
+        soitaNuotti("D");
+    }//GEN-LAST:event_jButton18MousePressed
+
+    private void jButton18MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton18MouseReleased
+
+    private void jButton22MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MousePressed
+        soitaNuotti("E");
+    }//GEN-LAST:event_jButton22MousePressed
+
+    private void jButton22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton22MouseReleased
+
+    private void jButton23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MousePressed
+        soitaNuotti("F");
+    }//GEN-LAST:event_jButton23MousePressed
+
+    private void jButton23MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton23MouseReleased
+
+    private void jButton24MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MousePressed
+        soitaNuotti("G");
+    }//GEN-LAST:event_jButton24MousePressed
+
+    private void jButton24MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton24MouseReleased
+
+    private void jButton25MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MousePressed
+        soitaNuotti("A");
+    }//GEN-LAST:event_jButton25MousePressed
+
+    private void jButton25MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton25MouseReleased
+
+    private void jButton17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MousePressed
+        soitaNuotti("B");
+    }//GEN-LAST:event_jButton17MousePressed
+
+    private void jButton17MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton17MouseReleased
+
+    private void jButton16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MousePressed
+        soitaNuotti("C#");
+    }//GEN-LAST:event_jButton16MousePressed
+
+    private void jButton16MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton16MouseReleased
+
+    private void jButton21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MousePressed
+        soitaNuotti("D#");
+    }//GEN-LAST:event_jButton21MousePressed
+
+    private void jButton21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton21MouseReleased
+
+    private void jButton27MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton27MousePressed
+        soitaNuotti("F#");
+    }//GEN-LAST:event_jButton27MousePressed
+
+    private void jButton27MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton27MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton27MouseReleased
+
+    private void jButton26MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton26MousePressed
+        soitaNuotti("G#");
+    }//GEN-LAST:event_jButton26MousePressed
+
+    private void jButton26MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton26MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton26MouseReleased
+
+    private void jButton28MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton28MousePressed
+        soitaNuotti("A#");
+    }//GEN-LAST:event_jButton28MousePressed
+
+    private void jButton28MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton28MouseReleased
+        irti();
+    }//GEN-LAST:event_jButton28MouseReleased
+
+    private void jButton18StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton18StateChanged
+
+        mustat();
+    }//GEN-LAST:event_jButton18StateChanged
+
+    private void jButton18FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton18FocusGained
+        mustat();
+    }//GEN-LAST:event_jButton18FocusGained
+
+    private void jButton18MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MouseMoved
+        mustat();
+    }//GEN-LAST:event_jButton18MouseMoved
+
+    private void jButton22StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton22StateChanged
+        mustat();
+    }//GEN-LAST:event_jButton22StateChanged
+
+    private void jButton23StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton23StateChanged
+        mustat();
+    }//GEN-LAST:event_jButton23StateChanged
+
+    private void jButton24StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton24StateChanged
+        mustat();
+    }//GEN-LAST:event_jButton24StateChanged
+
+    private void jButton25StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton25StateChanged
+        mustat();
+    }//GEN-LAST:event_jButton25StateChanged
+
+    private void jButton17StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton17StateChanged
+        mustat();
+    }//GEN-LAST:event_jButton17StateChanged
+
+    private void jButton22FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton22FocusGained
+        mustat();
+    }//GEN-LAST:event_jButton22FocusGained
+
+    private void jButton23FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton23FocusGained
+        mustat();
+    }//GEN-LAST:event_jButton23FocusGained
+
+    private void jButton24FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton24FocusGained
+        mustat();
+    }//GEN-LAST:event_jButton24FocusGained
+
+    private void jButton25FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton25FocusGained
+        mustat();
+    }//GEN-LAST:event_jButton25FocusGained
+
+    private void jButton17FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton17FocusGained
+        mustat();
+    }//GEN-LAST:event_jButton17FocusGained
+
+    private void jButton22MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseMoved
+        mustat();
+    }//GEN-LAST:event_jButton22MouseMoved
+
+    private void jButton23MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseMoved
+        mustat();
+    }//GEN-LAST:event_jButton23MouseMoved
+
+    private void jButton24MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MouseMoved
+        mustat();
+    }//GEN-LAST:event_jButton24MouseMoved
+
+    private void jButton25MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MouseMoved
+        mustat();
+    }//GEN-LAST:event_jButton25MouseMoved
+
+    private void jButton17MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseMoved
+        mustat();
+    }//GEN-LAST:event_jButton17MouseMoved
+
+    public void mustat() {
+        jButton16.repaint();
+        jButton21.repaint();
+        jButton26.repaint();
+        jButton27.repaint();
+        jButton28.repaint();
+        this.freimi.requestFocus();
+    }
+
     public void onOff(int numero) {
         Oskillaattori osc = this.syna.haeOskillaattoriIndeksilla(numero);
         osc.onOffKytkin();
+        this.freimi.requestFocus();
     }
 
     // public void giveFocus() {
@@ -600,17 +1159,33 @@ public class Gui extends javax.swing.JPanel {
 //rekursio(c);
 //
 //}
-    
     // public void rekursio(Container c) {
-   // ArrayList<Component> comps = c.getComponents();
-   // for (Coponent c : comps) {
-   // if (c.SuperClass == Container) {
-     //   rekursio(c);
-      //  c.passFocus();
-  //  }
-    
+    // ArrayList<Component> comps = c.getComponents();
+    // for (Coponent c : comps) {
+    // if (c.SuperClass == Container) {
+    //   rekursio(c);
+    //  c.passFocus();
+    //  }
 //}
     //}
+    public void soitaNuotti(String nuotti) {
+        syna.asetaNuottiKaikille(nuotti);
+        try {
+            syna.soitto();
+        } catch (Exception e) {
+
+        }
+        this.freimi.requestFocus();
+    }
+
+    public void irti() {
+        try {
+            syna.hiljenna();
+        } catch (Exception e) {
+
+        }
+        this.freimi.requestFocus();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Lopetusnappi;
@@ -619,7 +1194,22 @@ public class Gui extends javax.swing.JPanel {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -629,6 +1219,7 @@ public class Gui extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelOsc1;
     private javax.swing.JLabel jLabelOsc2;
     private javax.swing.JLabel jLabelOsc3;
+    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JLabel oktaavilabel;
     private javax.swing.JLabel oktaavilabel1;

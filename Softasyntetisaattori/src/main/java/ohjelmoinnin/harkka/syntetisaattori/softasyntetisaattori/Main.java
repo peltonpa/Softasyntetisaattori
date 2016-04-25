@@ -24,8 +24,9 @@ public class Main {
         //Tekstikayttoliittyma tl = new Tekstikayttoliittyma(new Scanner(System.in));
         //tl.kaynnista();
         Syntetisaattorisovellus syna = new Syntetisaattorisovellus(new AudioContext());
-        Gui gui = new Gui(syna);
+        
         JFrame jf = new JFrame();
+        Gui gui = new Gui(syna, jf);
         
         jf.add(gui);
         jf.addKeyListener(new Kontrolleri(syna));
