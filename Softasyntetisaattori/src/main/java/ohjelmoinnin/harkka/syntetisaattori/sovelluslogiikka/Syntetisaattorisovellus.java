@@ -26,7 +26,7 @@ public class Syntetisaattorisovellus {
     private Gain master;
 
     /**
-     * .
+     * Luokan konstruktori.
      * @param ac 
      */
     public Syntetisaattorisovellus(AudioContext ac) {

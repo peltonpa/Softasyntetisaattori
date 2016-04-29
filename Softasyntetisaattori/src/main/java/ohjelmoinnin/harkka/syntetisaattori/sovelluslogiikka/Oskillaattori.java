@@ -30,7 +30,7 @@ public class Oskillaattori {
     private int oktaavi;
 
     /**
-     * .
+     * Konstruktori AudioContext-oliolla ja nuotilla.
      * @param ac AudioContext-olio
      * @param nuotti alustettava nuotti
      */
@@ -47,7 +47,7 @@ public class Oskillaattori {
     }
 
     /**
-     * .
+     * Konstruktori pelkällä AudioContext-oliolla.
      * @param ac AudioContext-olio
      */
     public Oskillaattori(AudioContext ac) {
@@ -62,7 +62,7 @@ public class Oskillaattori {
     }
 
     /**
-     * .
+     * Konstruktori AudioContextilla, nuotilla ja aallonmuotobufferilla.
      * @param ac AudioContext-olio
      * @param nuotti nuotti merkkijonona
      * @param buffer ääniaaltobufferi
@@ -102,7 +102,7 @@ public class Oskillaattori {
     }
 
     /**
-     * .
+     * Asettaa aaltomuodoksi parametrina annetun bufferin.
      * @param buffer ääniaaltobufferi
      */
     public void asetaAaltomuoto(Buffer buffer) {
@@ -110,14 +110,14 @@ public class Oskillaattori {
     }
 
     /**
-     * .
+     * Lisää äänenvoimakkuutta yhdellä yksiköllä.
      */
     public void lisaaAanenvoimakkuutta() {
         this.g.setGain(this.g.getGain() + 1);
     }
 
     /**
-     * .
+     * Laskee äänenvoimakkuutta yhdellä yksiköllä.
      */
     public void laskeAanenvoimakkuutta() {
         this.g.setGain(this.g.getGain() - 1);

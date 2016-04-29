@@ -13,3 +13,4 @@ Päivä | Tunnit | Kuvaus
 14.04.2016 | 3h | Viikkoraporttien generointi, JavaDocin luonti ja Checkstyle-virheiden korjaus
 19.04.2016 | 2h | Kontrolleri ja gui
 21.04.2016 | 1h | Kontrolleri ja gui
+25.04.2016 | 6h | Keyboard-kontrolleri kuntoon ja visuaalinen hiirellä klikattava ohjain

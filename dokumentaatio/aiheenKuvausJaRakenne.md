@@ -6,8 +6,6 @@ Luokat Gain, MasterGain ja WavePlayer ovat Beads-kirjaston luokkia, joita Syntet
 
 Kuviteltu yksinkertainen esimerkki ohjelman toiminnasta olisi siis seuraavanlainen: käyttäjä käynnistää ohjelman, Syntetisaattorisovellus luo pari oskillaattoria Oskillaattori-luokasta. Oskillaattorit luovat kukin WavePlayer-olion, jotka tuottavat datana aaltoliikettä oskillaattorin yksittäisiin Gain-olioihin. Nämä Gain-oliot ohjautuvat MasterGainille, joka ohjautuu (tai sijaitsee) syntetisaattorisovellukselle/sovelluksessa. MasterGain tulostaa aaltodatan Beadsin AudioContext-luokalle joka antaa sen edelleen Javan äänioutputille, joka ohjaa signaalin esim. äänen ulostuloporttiin jossa aaltoliike muutetaan digitaalisesta analogiseksi sähkövirraksi joka voi soida kuulokkeista tai kaiuttimista. 
 
-Myöhemmin kontrollia tullaan lisäämään Syntetisaattorisovellus-luokan avulla. Beads-kirjastot (.jar-tiedostoja) sijaitsevat Softasyntetisaattori/src/resources-hakemistossa.
-
 Käyttäjät: kuka tahansa asiasta kiinnostunut
 
 Kaikkien käyttäjien toiminnot:

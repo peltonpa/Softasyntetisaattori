@@ -18,11 +18,7 @@ public class Kontrolleri implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        try {
-         
-        } catch (Exception ee) {
-            
-        }
+        //
     }
 
     @Override

@@ -1,4 +1,4 @@
-Asennus: Jos haluat saada projektin toimimaan Netbeansissa, Beads-kirjasto täytyy manuaalisesti osoittaa projektille seuraavasti:
+Asennus NetBeansissa (ohita jos avaat ohjelman .jar-tiedostosta): Jos haluat saada projektin toimimaan NetBeansissa, Beads-kirjasto täytyy manuaalisesti osoittaa projektille seuraavasti:
 
 1) Klikkaa Netbeansissa projektin Dependencies-valikko auki 
 
@@ -10,4 +10,23 @@ Asennus: Jos haluat saada projektin toimimaan Netbeansissa, Beads-kirjasto täyt
 
 5) Tee sama tiedostolle beads-library-1.0.jar
 
-Ohjelmaa käynnistettäessä ilmestyy graafinen käyttöliittymä. Äänilähteitä (oskillaattori) on 3, ja jokaiselle voi valita yhden ääniaallon (sini, saha, kolmio, kantti tai kohina). Oskillaattorit ovat oletusarvoltaan pois päältä ja ne saa päälle painamalla "On/off"-nappia. Voit soittaa ne klikkaamalla soita-näppäintä hiirellä ja sulkea ohjelman lopeta-napista.
+Ohjelmaa käynnistettäessä ilmestyy graafinen käyttöliittymä. Äänilähteitä (oskillaattori) on 3, ja jokaiselle voi valita yhden ääniaallon (sini, saha, kolmio, kantti tai kohina). Oskillaattorit ovat oletusarvoltaan pois päältä ja ne saa päälle painamalla "On/off"-nappia. Jokaiselle oskillaattorille voi myös laskea tai nostaa oktaavia painamalla + tai - näppäimiä.
+
+Soittaminen tapahtuu joko klikkaamalla graafisen käyttöliittymän koskettimia hiirellä, tai näppäimistön näppäimillä. Näppäimet vastaavat seuraavia nuotteja:
+
+a = C
+s = D
+d = E
+f = F
+g = G
+h = A
+j = B
+w = C#
+e = D#
+t = F#
+y = G#
+u = A#
+
+Ohjelman voi lopettaa painamalla Lopeta-näppäintä.
+
+
