@@ -15,16 +15,27 @@ Ohjelmaa käynnistettäessä ilmestyy graafinen käyttöliittymä. Äänilähtei
 Soittaminen tapahtuu joko klikkaamalla graafisen käyttöliittymän koskettimia hiirellä, tai näppäimistön näppäimillä. Näppäimet vastaavat seuraavia nuotteja:
 
 a = C
+
 s = D
+
 d = E
+
 f = F
+
 g = G
+
 h = A
+
 j = B
+
 w = C#
+
 e = D#
+
 t = F#
+
 y = G#
+
 u = A#
 
 Ohjelman voi lopettaa painamalla Lopeta-näppäintä.
