@@ -1,12 +1,18 @@
 Alla on nähtävissä ohjelman alustava suunniteltu rakenne luokkakaaviona:
 
-![Luokkakaavio](/alustava_luokkakaavio.png)
+![Luokkakaavio](/luokkakaavio_viimeinen.png)
 
 Luokat Gain, MasterGain ja WavePlayer ovat Beads-kirjaston luokkia, joita Syntetisaattorisovellus-luokka hallinnoi. Oma luokka Oskillaattori hallinnoi yhtä äänilähdettä (WavePlayer) ja ohjaa sen tuotoksen yhteen Gain-olioon, jotka kaikki ohjautuvat MasterGain-olioon, joka vuorostaan siirtyy Syntetisaattorisovellus-luokalle, joka tulostaa äänen ulos. 
 
 Kuviteltu yksinkertainen esimerkki ohjelman toiminnasta olisi siis seuraavanlainen: käyttäjä käynnistää ohjelman, Syntetisaattorisovellus luo pari oskillaattoria Oskillaattori-luokasta. Oskillaattorit luovat kukin WavePlayer-olion, jotka tuottavat datana aaltoliikettä oskillaattorin yksittäisiin Gain-olioihin. Nämä Gain-oliot ohjautuvat MasterGainille, joka ohjautuu (tai sijaitsee) syntetisaattorisovellukselle/sovelluksessa. MasterGain tulostaa aaltodatan Beadsin AudioContext-luokalle joka antaa sen edelleen Javan äänioutputille, joka ohjaa signaalin esim. äänen ulostuloporttiin jossa aaltoliike muutetaan digitaalisesta analogiseksi sähkövirraksi joka voi soida kuulokkeista tai kaiuttimista. 
 
-Myöhemmin kontrollia tullaan lisäämään Syntetisaattorisovellus-luokan avulla. Beads-kirjastot (.jar-tiedostoja) sijaitsevat Softasyntetisaattori/src/resources-hakemistossa.
+Alla pari sekvenssikaaviota: 
+
+![Sekvenssi yksi](/sekvenssikaavio1.png)
+Tässä yllä olevassa sekvenssikaaviossa käynnistetään mainista ohjelma ja alustetaan kaikki kuntoon (GUI, Syntetisaattorisovellus, oskillaattorit, AudioContext-olio, Beadsin Gain-oliot). GUI rekisteröi onOff-kytkimen painallukset oskillaattoreille 1 ja 2, jolloin 3 jää kytkemättä päälle. Tämän jälkeen GUI Rekisteröi Kontrolleri-luokan KeyListenerin kautta näppäimistön f-näppäimen painalluksen (Kontrolleri-luokka jätetty selkeyden vuoksi pois sekvenssikaaviosta, kaaviosta alkoi tulla jo liian leveä ja Kontrolleriluokka on siis käytännössä vain KeyListener). GUI lähettää tiedon tästä Syntetisaattorisovellukselle, joka alustaa kaikille oskillaattoreille nuotin F ja lähettää AudioContextille viestin äänen ulostulon avauksesta, jolloin oskillaattorien 1 ja 2 ääni tulee ulos äänen ulostulosta. Kun Kontrolleri rekisteröi f-näppäimen irti päästämisen, GUI lähettää tästä tiedon Syntetisaattorisovellukselle, joka käskee AudioContextia sulkemaan äänen ulostulon. Toinen käyttötapaus: 
+
+![Sekvenssi kaksi](/sekvenssikaavio2.png)
+Kaavio alkaa samoin kuin edellinen kaavio oskillaattorien alustamiseen asti. Päälle kytketään oskillaattori1, sille asetetaan uusi aaltomuoto (kantti, jolloin ääni on erilainen), ja sitä alennetaan yksi oktaavi (äänen hertsit puolittuvat). Tämän jälkeen GUI saa viestin Kontrollerilta, että näppäintä "a" on painettu. Tässä kaaviossa on edellisen kaavion tapaan selkeyden vuoksi jätetty KeyListenerin toteuttava Kontrolleri pois, Kontrolleri siis vain rekisteröi näppäimen painalluksia ja lähettää niistä tiedot GUI:lle. Näppäimistön "a" vastaa nuottia C (näppäimistö ikään kuin matkii pianon koskettimien layouttia). Oskillaattorien nuoteiksi asetetaan "C", ja AudioContext saa Syntetisaattorisovellukselta käskyn avata äänen ulostulo. Ääntä kuuluu vain oskillaattori1:stä, koska muita ei ole kytketty päälle. Kun näppäimistön näppäin päästetään irti, hiljenee äänen ulostulo AudioContextista.
 
 Käyttäjät: kuka tahansa asiasta kiinnostunut
 

@@ -1,0 +1,1 @@
+[Tekstikayttoliittyma]1-ohjaa<>[Syntetisaattorisovellus], [Syntetisaattorisovellus]++-1..*>[Oskillaattori], [Syntetisaattorisovellus]++-1[MasterGain], [Oskillaattori]++-1>[WavePlayer], [Oskillaattori]++-1>[Gain], [Gain], [MasterGain]1-1..*[Gain]
