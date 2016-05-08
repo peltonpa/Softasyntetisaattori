@@ -1,5 +1,5 @@
 # Softasyntetisaattori
-Yksinkertainen ääntä tuottava ohjelma Javalla (4. periodin Ohjelmoinnin harkkatyö). Apuna käytetään Javalle tehtyä [Beads-kirjastoa](http://www.beadsproject.net/ "Beads"). 
+Yksinkertainen ääntä tuottava ohjelma Javalla (4. periodin Ohjelmoinnin harkkatyö). Apuna käytetään Javalle tehtyä [Beads-kirjastoa](http://www.beadsproject.net/ "Beads"). Suoritettava JAR-paketti löytyy sekä juuresta että Softasyntetisaattori/target-hakemistosta.
 
 # Dokumentaatio
 [Aiheen kuvaus ja rakenne](dokumentaatio/aiheenKuvausJaRakenne.md)
