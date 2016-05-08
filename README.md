@@ -10,6 +10,6 @@ Yksinkertainen ääntä tuottava ohjelma Javalla (4. periodin Ohjelmoinnin harkk
 
 [Checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/peltonpa/Softasyntetisaattori/blob/master/dokumentaatio/Checkstyle-raportit/checkstyle.html)
 
-[PIT-raportti](https://htmlpreview.github.io/?https://github.com/peltonpa/Softasyntetisaattori/blob/master/dokumentaatio/pit/201604291642/index.html)
+[PIT-raportti](https://htmlpreview.github.io/?https://github.com/peltonpa/Softasyntetisaattori/blob/master/dokumentaatio/pit/201605081933/index.html)
 
 [JavaDoc](https://htmlpreview.github.io/?https://github.com/peltonpa/Softasyntetisaattori/blob/master/dokumentaatio/JavaDoc/help-doc.html)
