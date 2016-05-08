@@ -29,37 +29,8 @@ public class Oskillaattori {
     private Map<String, Float> taajuuskartta;
     private int oktaavi;
 
-    /**
-     * Konstruktori AudioContext-oliolla ja nuotilla.
-     * @param ac AudioContext-olio
-     * @param nuotti alustettava nuotti
-     */
-    public Oskillaattori(AudioContext ac, String nuotti) {
-        this.ac = ac;
-        this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), Buffer.SINE);
-        this.g = new Gain(ac, 1, 1);
-        this.kuori = kuori;
-        this.g.addInput(this.aalto);
-        poisPaalta();
-        this.taajuuskartta = new Taajuudet().getTaajuuskartta();
-        this.oktaavi = 4;
-        asetaNuotti(nuotti);
-    }
-
-    /**
-     * Konstruktori pelkällä AudioContext-oliolla.
-     * @param ac AudioContext-olio
-     */
-    public Oskillaattori(AudioContext ac) {
-        this.ac = ac;
-        this.aalto = new WavePlayer(ac, Nuotti.valueOf("C").getTaajuus(), Buffer.SINE);
-        this.g = new Gain(ac, 1, 1);
-        this.kuori = kuori;
-        this.g.addInput(this.aalto);
-        poisPaalta();
-        this.taajuuskartta = new Taajuudet().getTaajuuskartta();
-        this.oktaavi = 4;
-    }
+    
+ 
 
     /**
      * Konstruktori AudioContextilla, nuotilla ja aallonmuotobufferilla.
@@ -70,7 +41,7 @@ public class Oskillaattori {
     public Oskillaattori(AudioContext ac, String nuotti, Buffer buffer) {
         this.ac = ac;
         this.aalto = new WavePlayer(ac, Nuotti.valueOf(nuotti).getTaajuus(), buffer);
-        this.g = new Gain(ac, 1, 1);
+        this.g = new Gain(ac, 1, 0.5f);
         this.kuori = kuori;
         this.g.addInput(this.aalto);
         poisPaalta();
@@ -108,23 +79,25 @@ public class Oskillaattori {
     public void asetaAaltomuoto(Buffer buffer) {
         this.aalto.setBuffer(buffer);
     }
+    
+    /**
+     * Gainin voimakkuuden asetus oskillaattorille. Tätä muuttaa vain Osc1:n
+     * volume-slideri GUI:ssa.
+     * @param gaini haluttu äänenvoimakkuus liukulukuna
+     */
+    public void asetaGain(Float gaini) {
+        if(gaini >= 1f) {
+            gaini = 1f;
+        }
+        if(gaini <= 0f) {
+            gaini = 0f;
+        }
+        this.g.setGain(gaini);
+    }
 
     /**
      * Lisää äänenvoimakkuutta yhdellä yksiköllä.
      */
-    public void lisaaAanenvoimakkuutta() {
-        this.g.setGain(this.g.getGain() + 1);
-    }
-
-    /**
-     * Laskee äänenvoimakkuutta yhdellä yksiköllä.
-     */
-    public void laskeAanenvoimakkuutta() {
-        this.g.setGain(this.g.getGain() - 1);
-        if (this.g.getGain() < 0) {
-            this.g.setGain(0);
-        }
-    }
 
     public AudioContext getAc() {
         return ac;
@@ -194,6 +167,10 @@ public class Oskillaattori {
         }
     }
 
+    /**
+     * Hakee kokonaislukuna nykyisen oktaavin.
+     * @return oktaavi
+     */
     public int getOktaavi() {
         return oktaavi;
     }

@@ -33,7 +33,7 @@ public class Syntetisaattorisovellus {
         this.ac = ac;
         this.kuori = new Envelope(ac, 500);
         this.oskillaattorit = new ArrayList();
-        this.master = new Gain(ac, 1, 1);
+        this.master = new Gain(ac, 1, 0.5f);
         lisaaOskillaattorit();
         alustaAudioContextiinGainit();
     }
@@ -116,6 +116,21 @@ public class Syntetisaattorisovellus {
 
     public Gain getMaster() {
         return master;
+    }
+    
+    /**
+     * Asettaa master-äänenvoimakkuuden halutulle tasolle. Tätä ohjaa vain 
+     * GUI:n Master Volume-slideri.
+     * @param gaini haluttu voimakkuus liukulukuna
+     */
+    public void setMasterGain(Float gaini) {
+        if(gaini > 1f) {
+            gaini = 1f;
+        }
+        if (gaini < 0f) {
+            gaini = 0f;
+        }
+        this.master.setGain(gaini);
     }
 
 }

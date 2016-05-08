@@ -14,7 +14,7 @@ Tässä yllä olevassa sekvenssikaaviossa käynnistetään mainista ohjelma ja a
 ![Sekvenssi kaksi](/sekvenssikaavio2.png)
 Kaavio alkaa samoin kuin edellinen kaavio oskillaattorien alustamiseen asti. Päälle kytketään oskillaattori1, sille asetetaan uusi aaltomuoto (kantti, jolloin ääni on erilainen), ja sitä alennetaan yksi oktaavi (äänen hertsit puolittuvat). Tämän jälkeen GUI saa viestin Kontrollerilta, että näppäintä "a" on painettu. Tässä kaaviossa on edellisen kaavion tapaan selkeyden vuoksi jätetty KeyListenerin toteuttava Kontrolleri pois, Kontrolleri siis vain rekisteröi näppäimen painalluksia ja lähettää niistä tiedot GUI:lle. Näppäimistön "a" vastaa nuottia C (näppäimistö ikään kuin matkii pianon koskettimien layouttia). Oskillaattorien nuoteiksi asetetaan "C", ja AudioContext saa Syntetisaattorisovellukselta käskyn avata äänen ulostulo. Ääntä kuuluu vain oskillaattori1:stä, koska muita ei ole kytketty päälle. Kun näppäimistön näppäin päästetään irti, hiljenee äänen ulostulo AudioContextista.
 
-Käyttäjät: kuka tahansa asiasta kiinnostunut
+Ohjelman käyttäjät: kuka tahansa asiasta kiinnostunut
 
 Kaikkien käyttäjien toiminnot:
   * Ohjelman käynnistys

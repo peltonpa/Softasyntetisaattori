@@ -6,6 +6,7 @@
 package ohjelmoinnin.harkka.syntetisaattori.gui;
 
 import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 import net.beadsproject.beads.data.Buffer;
 import ohjelmoinnin.harkka.syntetisaattori.ohjain.Kontrolleri;
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Oskillaattori;
@@ -22,6 +23,7 @@ public class Gui extends javax.swing.JPanel {
      */
     private Syntetisaattorisovellus syna;
     private JFrame freimi;
+    
 
     public Gui(Syntetisaattorisovellus syna, JFrame freimi) {
         this.syna = syna;
@@ -41,6 +43,7 @@ public class Gui extends javax.swing.JPanel {
         jLayeredPane2.setLayer(jButton26, 30);
         jLayeredPane2.setLayer(jButton27, 30);
         jLayeredPane2.setLayer(jButton28, 30);
+        this.freimi.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     /**
@@ -74,6 +77,7 @@ public class Gui extends javax.swing.JPanel {
         jButton27 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabelOsc2 = new javax.swing.JLabel();
         jLabelOsc1 = new javax.swing.JLabel();
         jLabelOsc3 = new javax.swing.JLabel();
@@ -81,7 +85,6 @@ public class Gui extends javax.swing.JPanel {
         osc1OnOff = new javax.swing.JToggleButton();
         osc3OnOff = new javax.swing.JToggleButton();
         Lopetusnappi = new javax.swing.JButton();
-        Soittonappi = new javax.swing.JButton();
         osc1Sini = new javax.swing.JRadioButton();
         osc1Saha = new javax.swing.JRadioButton();
         osc1Kantti = new javax.swing.JRadioButton();
@@ -106,6 +109,14 @@ public class Gui extends javax.swing.JPanel {
         oktaavilabel2 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jSlider1 = new javax.swing.JSlider();
+        jSlider2 = new javax.swing.JSlider();
+        jSlider3 = new javax.swing.JSlider();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jSlider4 = new javax.swing.JSlider();
+        jLabel5 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -142,8 +153,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton16.setBackground(new java.awt.Color(0, 0, 0));
         jButton16.setForeground(new java.awt.Color(60, 63, 65));
-        jButton16.setText("C");
-        jButton16.setToolTipText("C");
+        jButton16.setToolTipText("C#");
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton16MousePressed(evt);
@@ -156,7 +166,6 @@ public class Gui extends javax.swing.JPanel {
 
         jButton14.setBackground(new java.awt.Color(255, 255, 255));
         jButton14.setForeground(new java.awt.Color(60, 63, 65));
-        jButton14.setText("C");
         jButton14.setToolTipText("C");
         jButton14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -192,8 +201,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton17.setBackground(new java.awt.Color(255, 255, 255));
         jButton17.setForeground(new java.awt.Color(60, 63, 65));
-        jButton17.setText("C");
-        jButton17.setToolTipText("C");
+        jButton17.setToolTipText("B");
         jButton17.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jButton17StateChanged(evt);
@@ -221,8 +229,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton21.setBackground(new java.awt.Color(0, 0, 0));
         jButton21.setForeground(new java.awt.Color(60, 63, 65));
-        jButton21.setText("C");
-        jButton21.setToolTipText("C");
+        jButton21.setToolTipText("D#");
         jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton21MousePressed(evt);
@@ -235,8 +242,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton18.setBackground(new java.awt.Color(255, 255, 255));
         jButton18.setForeground(new java.awt.Color(60, 63, 65));
-        jButton18.setText("C");
-        jButton18.setToolTipText("C");
+        jButton18.setToolTipText("D");
         jButton18.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jButton18StateChanged(evt);
@@ -264,8 +270,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton22.setBackground(new java.awt.Color(255, 255, 255));
         jButton22.setForeground(new java.awt.Color(60, 63, 65));
-        jButton22.setText("C");
-        jButton22.setToolTipText("C");
+        jButton22.setToolTipText("E");
         jButton22.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jButton22StateChanged(evt);
@@ -293,8 +298,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton23.setBackground(new java.awt.Color(255, 255, 255));
         jButton23.setForeground(new java.awt.Color(60, 63, 65));
-        jButton23.setText("C");
-        jButton23.setToolTipText("C");
+        jButton23.setToolTipText("F");
         jButton23.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jButton23StateChanged(evt);
@@ -322,8 +326,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton24.setBackground(new java.awt.Color(255, 255, 255));
         jButton24.setForeground(new java.awt.Color(60, 63, 65));
-        jButton24.setText("C");
-        jButton24.setToolTipText("C");
+        jButton24.setToolTipText("G");
         jButton24.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jButton24StateChanged(evt);
@@ -351,8 +354,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton25.setBackground(new java.awt.Color(255, 255, 255));
         jButton25.setForeground(new java.awt.Color(60, 63, 65));
-        jButton25.setText("C");
-        jButton25.setToolTipText("C");
+        jButton25.setToolTipText("A");
         jButton25.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jButton25StateChanged(evt);
@@ -376,12 +378,16 @@ public class Gui extends javax.swing.JPanel {
                 jButton25MouseReleased(evt);
             }
         });
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
         jLayeredPane2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 20, 80));
 
         jButton27.setBackground(new java.awt.Color(0, 0, 0));
         jButton27.setForeground(new java.awt.Color(60, 63, 65));
-        jButton27.setText("C");
-        jButton27.setToolTipText("C");
+        jButton27.setToolTipText("F#");
         jButton27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton27MousePressed(evt);
@@ -394,8 +400,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton26.setBackground(new java.awt.Color(0, 0, 0));
         jButton26.setForeground(new java.awt.Color(60, 63, 65));
-        jButton26.setText("C");
-        jButton26.setToolTipText("C");
+        jButton26.setToolTipText("G#");
         jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton26MousePressed(evt);
@@ -408,8 +413,7 @@ public class Gui extends javax.swing.JPanel {
 
         jButton28.setBackground(new java.awt.Color(0, 0, 0));
         jButton28.setForeground(new java.awt.Color(60, 63, 65));
-        jButton28.setText("C");
-        jButton28.setToolTipText("C");
+        jButton28.setToolTipText("A#");
         jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton28MousePressed(evt);
@@ -419,6 +423,9 @@ public class Gui extends javax.swing.JPanel {
             }
         });
         jLayeredPane2.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 20, 40));
+
+        jLabel4.setText("Koskettimet");
+        jLayeredPane2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
 
         jLabelOsc2.setText("Osc2");
 
@@ -451,18 +458,6 @@ public class Gui extends javax.swing.JPanel {
         Lopetusnappi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LopetusnappiActionPerformed(evt);
-            }
-        });
-
-        Soittonappi.setText("Soita");
-        Soittonappi.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                SoittonappiMouseReleased(evt);
-            }
-        });
-        Soittonappi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SoittonappiActionPerformed(evt);
             }
         });
 
@@ -649,81 +644,149 @@ public class Gui extends javax.swing.JPanel {
             }
         });
 
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider1StateChanged(evt);
+            }
+        });
+        jSlider1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jSlider1PropertyChange(evt);
+            }
+        });
+
+        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider2StateChanged(evt);
+            }
+        });
+        jSlider2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jSlider2PropertyChange(evt);
+            }
+        });
+
+        jSlider3.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider3StateChanged(evt);
+            }
+        });
+        jSlider3.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jSlider3PropertyChange(evt);
+            }
+        });
+
+        jLabel1.setText("Osc1 volume");
+
+        jLabel2.setText("Osc2 volume");
+
+        jLabel3.setText("Osc3 volume");
+
+        jSlider4.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider4StateChanged(evt);
+            }
+        });
+
+        jLabel5.setText("MASTER VOLUME");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Soittonappi)
-                .addGap(58, 58, 58)
-                .addComponent(Lopetusnappi)
-                .addGap(219, 219, 219))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(osc1OnOff)
+                                    .addGap(58, 58, 58)
+                                    .addComponent(jLabelOsc2))
+                                .addComponent(oktaavilabel)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(osc1Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(osc1Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(osc1Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                                    .addComponent(osc1Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(osc1Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButton2)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(62, 62, 62)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(osc1OnOff)
-                                .addGap(58, 58, 58)
-                                .addComponent(jLabelOsc2))
-                            .addComponent(oktaavilabel)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(osc1Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc1Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc1Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                                .addComponent(osc1Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc1Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(16, 16, 16)
+                                .addComponent(osc2OnOff))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(osc2OnOff)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                                .addComponent(jLabelOsc3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(oktaavilabel1)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton4))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(osc2Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(osc2Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(osc2Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(osc2Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(osc2Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(oktaavilabel1)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jButton3)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButton4))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(osc2Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(osc2Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(osc2Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(osc2Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(osc2Kohina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(osc3OnOff)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(osc3Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc3Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc3Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc3Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(osc3Kohina, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(oktaavilabel2)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton6))))
+                                .addComponent(jLabelOsc3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(osc3OnOff)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(osc3Saha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc3Sini, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc3Kolmio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc3Kantti, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(osc3Kohina, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(oktaavilabel2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton6))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(69, 69, 69))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)))
-                .addGap(17, 17, 17))
+                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSlider4, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
+                        .addComponent(Lopetusnappi)
+                        .addGap(35, 35, 35))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jLabel1)
+                .addGap(96, 96, 96)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(86, 86, 86))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(24, 24, 24)
                     .addComponent(jLabelOsc1)
-                    .addContainerGap(491, Short.MAX_VALUE)))
+                    .addContainerGap(553, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -787,13 +850,32 @@ public class Gui extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton5)
                             .addComponent(jButton6))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lopetusnappi)
-                    .addComponent(Soittonappi))
-                .addGap(29, 29, 29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSlider3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Lopetusnappi, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jSlider4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(24, 24, 24)
@@ -819,14 +901,6 @@ public class Gui extends javax.swing.JPanel {
     private void osc3OnOffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_osc3OnOffMouseClicked
         onOff(2);
     }//GEN-LAST:event_osc3OnOffMouseClicked
-
-    private void SoittonappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SoittonappiActionPerformed
-        try {
-            this.syna.soitto();
-        } catch (Exception e) {
-            throw new UnsupportedOperationException("Soitto-metodissa errori");
-        }
-    }//GEN-LAST:event_SoittonappiActionPerformed
 
     private void osc1SiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osc1SiniActionPerformed
         this.syna.getOskillaattorit().get(0).asetaAaltomuoto(Buffer.SINE);
@@ -944,14 +1018,6 @@ public class Gui extends javax.swing.JPanel {
         this.syna.haeOskillaattoriIndeksilla(2).nostaOktaavia();
         this.freimi.requestFocus();
     }//GEN-LAST:event_jButton6MouseClicked
-
-    private void SoittonappiMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SoittonappiMouseReleased
-        try {
-            this.syna.hiljenna();
-        } catch (Exception e) {
-            throw new UnsupportedOperationException("Hiljennys ei toimi (GUI-exception SOittonappiMouseReleased");
-        }
-    }//GEN-LAST:event_SoittonappiMouseReleased
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
 
@@ -1139,6 +1205,49 @@ public class Gui extends javax.swing.JPanel {
         mustat();
     }//GEN-LAST:event_jButton17MouseMoved
 
+    private void jSlider1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jSlider1PropertyChange
+        
+    }//GEN-LAST:event_jSlider1PropertyChange
+
+    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+        //minimi 0, maksimi 100
+        float gaini = jSlider1.getValue() / 100f;
+        this.syna.getOskillaattorit().get(0).asetaGain(gaini);
+        this.freimi.requestFocus();
+    }//GEN-LAST:event_jSlider1StateChanged
+
+    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
+    //minimi 0, maksimi 100
+        float gaini = jSlider2.getValue() / 100f;
+        this.syna.getOskillaattorit().get(1).asetaGain(gaini);
+        this.freimi.requestFocus();
+    }//GEN-LAST:event_jSlider2StateChanged
+
+    private void jSlider2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jSlider2PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSlider2PropertyChange
+
+    private void jSlider3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider3StateChanged
+        //minimi 0, maksimi 100
+        float gaini = jSlider3.getValue() / 100f;
+        this.syna.getOskillaattorit().get(2).asetaGain(gaini);
+        this.freimi.requestFocus();
+    }//GEN-LAST:event_jSlider3StateChanged
+
+    private void jSlider3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jSlider3PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSlider3PropertyChange
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jSlider4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider4StateChanged
+        float gaini = jSlider4.getValue() / 100f;
+        this.syna.setMasterGain(gaini);
+        this.freimi.requestFocus();
+    }//GEN-LAST:event_jSlider4StateChanged
+
     public void mustat() {
         jButton16.repaint();
         jButton21.repaint();
@@ -1189,7 +1298,6 @@ public class Gui extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Lopetusnappi;
-    private javax.swing.JButton Soittonappi;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -1216,11 +1324,20 @@ public class Gui extends javax.swing.JPanel {
     private javax.swing.JButton jButton6;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelOsc1;
     private javax.swing.JLabel jLabelOsc2;
     private javax.swing.JLabel jLabelOsc3;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JSlider jSlider1;
+    private javax.swing.JSlider jSlider2;
+    private javax.swing.JSlider jSlider3;
+    private javax.swing.JSlider jSlider4;
     private javax.swing.JLabel oktaavilabel;
     private javax.swing.JLabel oktaavilabel1;
     private javax.swing.JLabel oktaavilabel2;

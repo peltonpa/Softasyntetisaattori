@@ -25,9 +25,9 @@ public class Kontrolleri implements KeyListener {
     public void keyPressed(KeyEvent e) {
       // System.out.println("kirjain: " + e.getKeyChar());
         try {
+            Thread.sleep(20);
             String soitettava = "" + e.getKeyChar();
             soitettava = soitettava.toUpperCase();
-            System.out.println("soitettava: " + soitettava);
             String nuotti = soitettava(soitettava);
             if (!(nuotti.equals("EI"))) {
                 syna.asetaNuottiKaikille(nuotti);

@@ -5,7 +5,6 @@ package ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.Oskillaattori;
 import net.beadsproject.beads.core.AudioContext;
 import net.beadsproject.beads.data.Buffer;
@@ -16,26 +15,25 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
 public class OskillaattoriTest {
-    
+
     private AudioContext ac = new AudioContext();
-    
+
     public OskillaattoriTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -43,91 +41,112 @@ public class OskillaattoriTest {
     @Test
     public void konstruktoriAsettaaOikeanBufferin() {
         Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SAW);
-        
+
         assertEquals(osc.getAalto().getBuffer(), Buffer.SAW);
     }
-    
+
     @Test
     public void konstruktoriAsettaaOikeanNuotin() {
-        Oskillaattori osc = new Oskillaattori(ac, "G");
-        
+        Oskillaattori osc = new Oskillaattori(ac, "G", Buffer.SAW);
+
         assertEquals(osc.getAalto().getFrequency(), 784f, 1);
     }
-    
-    @Test
-    public void tyhjaNuottiJaBufferiKonstruktorissaAsettaaNuotiksiCJaBufferiksiSiniaallon() {
-        Oskillaattori osc = new Oskillaattori(ac);
-        
-        assertEquals(osc.getAalto().getFrequency(), 262f, 0.1);
-        assertEquals(osc.getAalto().getBuffer(), Buffer.SINE);
-    }
-    
+
     @Test
     public void asetaNuottiAsettaaOikeanTaajuuden() {
-        Oskillaattori osc = new Oskillaattori(ac, "C");
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
         osc.asetaNuotti("F");
-        
+
         assertEquals(osc.getAalto().getFrequency(), 699f, 1);
     }
-    
+
     @Test
-    public void lisaaAanenvoimakkuuttaToimii() {
-        Oskillaattori osc = new Oskillaattori(ac, "C");
-        osc.lisaaAanenvoimakkuutta();
-        osc.lisaaAanenvoimakkuutta();
-        osc.lisaaAanenvoimakkuutta();
-        
-        assertEquals(osc.getGain().getGain(), 4f, 0.1);
+    public void asetaGainToimii() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        osc.asetaGain(0.5f);
+
+        assertEquals(osc.getGain().getGain(), 0.5f, 0.01f);
     }
-    
+
     @Test
-    public void laskeAanenvoimakkuuttaToimii() {
-        Oskillaattori osc = new Oskillaattori(ac);
-        osc.lisaaAanenvoimakkuutta();
-        osc.laskeAanenvoimakkuutta();
-        osc.laskeAanenvoimakkuutta();
-        
-        assertEquals(osc.getGain().getGain(), 0, 0.1);
+    public void gainiaEiVoiAsettaaAlleNollan() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        osc.asetaGain(-1f);
+
+        assertEquals(osc.getGain().getGain(), 0f, 0.01f);
     }
-    
+
     @Test
-    public void aanenVoimakkuuttaEiVoidaLaskeaNegatiiviseksi() {
-        Oskillaattori osc = new Oskillaattori(ac);
-        osc.laskeAanenvoimakkuutta();
-        osc.laskeAanenvoimakkuutta();
-        osc.laskeAanenvoimakkuutta();
-        
-        assertEquals(osc.getGain().getGain(), 0, 0.1);
+    public void gainiEiVoiYlittaaYhta() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        osc.asetaGain(200f);
+
+        assertEquals(osc.getGain().getGain(), 1f, 0.01f);
     }
-    
+
     @Test
     public void hiljennaOskillaattoriToimii() {
-        Oskillaattori osc = new Oskillaattori(ac);
-        osc.lisaaAanenvoimakkuutta();
-        osc.lisaaAanenvoimakkuutta();
-        osc.lisaaAanenvoimakkuutta();
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        osc.asetaGain(1f);
         osc.poisPaalta();
-        
+
         assertEquals(osc.onPaalla(), false);
     }
-    
+
     @Test
     public void OnOffKytkinToimii() {
-        Oskillaattori osc = new Oskillaattori(ac);
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
         osc.onOffKytkin();
-        
+
         assertEquals(osc.onPaalla(), true);
     }
-    
+
     @Test
     public void poisPaaltaToimii() {
-        Oskillaattori osc = new Oskillaattori(ac);
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
         osc.onOffKytkin();
         osc.poisPaalta();
-        
+
         assertEquals(osc.onPaalla(), false);
     }
-    
-    
-    
+
+    @Test
+    public void alussaOskillaattoriPoisPaalta() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+
+        assertEquals(osc.onPaalla(), false);
+    }
+
+    @Test
+    public void oskillaattorillaOnAalto() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+
+        assertNotNull(osc.getAalto());
+    }
+
+    @Test
+    public void oktaavinNostoToimiiEikaYlitaViitta() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        osc.nostaOktaavia();
+
+        assertEquals(osc.getOktaavi(), 5);
+
+        osc.nostaOktaavia();
+
+        assertEquals(osc.getOktaavi(), 5);
+
+    }
+
+    @Test
+    public void oktaavinLaskuToimiiEikaLaskeNollaan() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        osc.laskeOktaavia();
+        osc.laskeOktaavia();
+        osc.laskeOktaavia();
+        osc.laskeOktaavia();
+        osc.laskeOktaavia();
+        
+        assertEquals(osc.getOktaavi(), 1);
+    }
+
 }
