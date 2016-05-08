@@ -71,4 +71,45 @@ public class SyntetisaattorisovellusTest {
        assertNotNull(osc);
    }
    
+   @Test
+   public void soittoAvaaAcn() throws Exception {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       syna.soitto();
+       
+       assertEquals(ac.isRunning(), true);
+   }
+   
+      @Test
+   public void hiljennaSulkeeAcn() throws Exception {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       syna.soitto();
+       syna.hiljenna();
+       
+       assertEquals(ac.isRunning(), false);
+   }
+   
+   @Test
+   public void setMasterGainToimiiKeskivaiheilla() {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       syna.setMasterGain(0.3f);
+       
+       assertEquals(syna.getMaster().getGain(), 0.3f, 0);
+   }
+   
+   @Test
+   public void setMasterGainEiYlitaYhta() {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       syna.setMasterGain(2f);
+       
+       assertEquals(syna.getMaster().getGain(), 1f, 0);
+   }
+   
+   @Test
+   public void masterGainEiLaskeAlleNollan() {
+       Syntetisaattorisovellus syna = new Syntetisaattorisovellus(ac);
+       syna.setMasterGain(-3f);
+       
+       assertEquals(syna.getMaster().getGain(), 0f, 0);
+   }
+   
 }

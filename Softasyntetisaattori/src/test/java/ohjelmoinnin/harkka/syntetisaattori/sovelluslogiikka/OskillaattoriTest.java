@@ -65,7 +65,7 @@ public class OskillaattoriTest {
         Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
         osc.asetaGain(0.5f);
 
-        assertEquals(osc.getGain().getGain(), 0.5f, 0.01f);
+        assertEquals(osc.getGain().getGain(), 0.5f, 0);
     }
 
     @Test
@@ -73,7 +73,7 @@ public class OskillaattoriTest {
         Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
         osc.asetaGain(-1f);
 
-        assertEquals(osc.getGain().getGain(), 0f, 0.01f);
+        assertEquals(osc.getGain().getGain(), 0f, 0);
     }
 
     @Test
@@ -81,7 +81,7 @@ public class OskillaattoriTest {
         Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
         osc.asetaGain(200f);
 
-        assertEquals(osc.getGain().getGain(), 1f, 0.01f);
+        assertEquals(osc.getGain().getGain(), 1f, 0);
     }
 
     @Test
@@ -148,5 +148,27 @@ public class OskillaattoriTest {
         
         assertEquals(osc.getOktaavi(), 1);
     }
+    
+    @Test 
+    public void wavePlayerOnKytkettyGainiin() {
+        Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+        assertEquals(osc.getGain().getNumberOfConnectedUGens(0), 1); 
+    }
 
+    @Test
+    public void bufferinVaihtoToimii() {
+         Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+         osc.asetaAaltomuoto(Buffer.SAW);
+         
+         assertEquals(osc.getAalto().getBuffer(), Buffer.SAW);
+    }
+    
+    @Test
+    public void gaininAsetusKeskitasolleToimii() {
+         Oskillaattori osc = new Oskillaattori(ac, "C", Buffer.SINE);
+         osc.asetaGain(0.5f);
+         
+         assertEquals(osc.getGain().getGain(), 0.5f, 0);
+    }
+    
 }

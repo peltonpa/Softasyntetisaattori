@@ -2,6 +2,8 @@ Mitä en testannut automaattisesti:
 
 Itse ääntä on tosi hankala JUnitin kautta testata, en tiedä olisiko joku tosi monimutkainen algoritmiplugini olemassa joka pystyisi tulkita että ulostuleva ääni todella on oikealla taajuudella. Siksi monet testit jäävät aika absraktille tasolle ja äänten ja nuottien toimivuus on testattu kuuntelemalla. Näitä on testattu käsin laskemalla oktaavia ylös ja alas vuorotellen ja soittamalla kaikkia nuotteja sekaisin ja mitään virheitä ei ole havaittu. Nuottien perustaajuudet generoidaan (osin kovakoodatusti) Taajuudet.java-luokassa, josta ne haetaan hashmapista.
 
+Tiettyjä Beadsin kanssa toimivia yhteyksiä on saavutettavaan hyötyyn nähden aivan järjetöntä testata (esim. AudioContextiin ja Gaineihin liittyviä asioita) ja oletan että Beads toimii. Osaa näistä ominaisuuksista siis on testattu, osasta Pit vääntää mutantteja joita en saanut tapettua, mutta ominaisuudet kuitenkin toimivat ohjelmaa testatessa (esim. jos AudioContext ei toimisi, ei mitään ääntä kuuluisi). 
+
 
 Bugit: 
 
