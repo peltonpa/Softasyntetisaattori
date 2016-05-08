@@ -29,11 +29,9 @@ public class Oskillaattori {
     private Map<String, Float> taajuuskartta;
     private int oktaavi;
 
-    
- 
-
     /**
      * Konstruktori AudioContextilla, nuotilla ja aallonmuotobufferilla.
+     *
      * @param ac AudioContext-olio
      * @param nuotti nuotti merkkijonona
      * @param buffer ääniaaltobufferi
@@ -74,30 +72,28 @@ public class Oskillaattori {
 
     /**
      * Asettaa aaltomuodoksi parametrina annetun bufferin.
+     *
      * @param buffer ääniaaltobufferi
      */
     public void asetaAaltomuoto(Buffer buffer) {
         this.aalto.setBuffer(buffer);
     }
-    
+
     /**
      * Gainin voimakkuuden asetus oskillaattorille. Tätä muuttaa vain Osc1:n
      * volume-slideri GUI:ssa.
+     *
      * @param gaini haluttu äänenvoimakkuus liukulukuna
      */
     public void asetaGain(Float gaini) {
-        if(gaini >= 1f) {
+        if (gaini >= 1f) {
             gaini = 1f;
         }
-        if(gaini <= 0f) {
+        if (gaini <= 0f) {
             gaini = 0f;
         }
         this.g.setGain(gaini);
     }
-
-    /**
-     * Lisää äänenvoimakkuutta yhdellä yksiköllä.
-     */
 
     public AudioContext getAc() {
         return ac;
@@ -169,6 +165,7 @@ public class Oskillaattori {
 
     /**
      * Hakee kokonaislukuna nykyisen oktaavin.
+     *
      * @return oktaavi
      */
     public int getOktaavi() {

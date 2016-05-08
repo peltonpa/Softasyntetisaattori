@@ -14,3 +14,6 @@ Päivä | Tunnit | Kuvaus
 19.04.2016 | 2h | Kontrolleri ja gui
 21.04.2016 | 1h | Kontrolleri ja gui
 25.04.2016 | 6h | Keyboard-kontrolleri kuntoon ja visuaalinen hiirellä klikattava ohjain
+28.4.2016 | 2h | Siistimistä
+02.04.2016 | 3h | Sliderien tekeminen ja pientä refaktorointia
+05.04.2016 | 4h | Viimeistely ja loppupalautuksen valmistelu

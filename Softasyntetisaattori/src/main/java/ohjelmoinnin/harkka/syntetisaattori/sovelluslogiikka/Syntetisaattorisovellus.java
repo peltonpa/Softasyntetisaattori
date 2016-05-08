@@ -15,8 +15,8 @@ import net.beadsproject.beads.ugens.Gain;
  * AudioContextin, joka kääntää tämän edelleen Javan output-implementaatiolle
  * joka viimein muuttaa signaalin sähkövirraksi kuulokeulostulossa tai esim.
  * ulkoisessa äänikortissa (ja tämä sähkövirta väreilee elementeissä jolloin
- * syntyy ääntä). 
- * 
+ * syntyy ääntä).
+ *
  */
 public class Syntetisaattorisovellus {
 
@@ -27,7 +27,8 @@ public class Syntetisaattorisovellus {
 
     /**
      * Luokan konstruktori.
-     * @param ac 
+     *
+     * @param ac Sovelluksen AudioContext-olio.
      */
     public Syntetisaattorisovellus(AudioContext ac) {
         this.ac = ac;
@@ -50,32 +51,34 @@ public class Syntetisaattorisovellus {
     /**
      * Asettaa nuotti-parametrin määrittämän nuotin kaikille. Nuotti on
      * merkkijono ja kääntyy int-taajuudeksi (ks. Nuotti-enum).
-     * @param nuotti 
+     *
+     * @param nuotti Kaikille oskillaattoreille asetettava nuotti.
      */
     public void asetaNuottiKaikille(String nuotti) {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
             this.oskillaattorit.get(i).asetaNuotti(nuotti);
         }
     }
-    
+
     private void alustaAudioContextiinGainit() {
         oskillaattoriInputitMasteriin();
         masterGainAudioContextiin();
     }
-    
+
     private void oskillaattoriInputitMasteriin() {
         for (int i = 0; i < this.oskillaattorit.size(); i++) {
             Gain g = this.oskillaattorit.get(i).getGain();
             this.master.addInput(g);
         }
     }
-    
+
     private void masterGainAudioContextiin() {
         this.ac.out.addInput(this.master);
     }
 
     /**
      * Hakee indeksillä 0-2 oskillaattorin sovelluksen oskillaattoreista.
+     *
      * @param numero indeksinumero
      * @return palauttaa oskillaattorin indeksillä 0-2.
      */
@@ -84,17 +87,21 @@ public class Syntetisaattorisovellus {
     }
 
     /**
-     * Avaa AudioContext-olion jolloin kuulokeliitännästä pitäisi
-     * kuulua ääntä (olettaen, että oskillaattorit ovat päällä).
-     * @throws Exception 
+     * Avaa AudioContext-olion jolloin kuulokeliitännästä pitäisi kuulua ääntä
+     * (olettaen, että oskillaattorit ovat päällä).
+     *
+     * @throws Exception Heittää poikkeuksen, jos AudioContextille sattuu
+     * käynnistyksessä tai suorituksen alussa virhe.
      */
     public void soitto() throws Exception {
         ac.start();
     }
-    
+
     /**
      * Hiljentää äänen ulostulon.
-     * @throws Exception 
+     *
+     * @throws Exception Heittää poikkeuksen, jos AudioContextin sulkemisessa
+     * tapahtuu virhe.
      */
     public void hiljenna() throws Exception {
         ac.stop();
@@ -115,14 +122,15 @@ public class Syntetisaattorisovellus {
     public Gain getMaster() {
         return master;
     }
-    
+
     /**
-     * Asettaa master-äänenvoimakkuuden halutulle tasolle. Tätä ohjaa vain 
-     * GUI:n Master Volume-slideri.
+     * Asettaa master-äänenvoimakkuuden halutulle tasolle. Tätä ohjaa vain GUI:n
+     * Master Volume-slideri.
+     *
      * @param gaini haluttu voimakkuus liukulukuna
      */
     public void setMasterGain(Float gaini) {
-        if(gaini > 1f) {
+        if (gaini > 1f) {
             gaini = 1f;
         }
         if (gaini < 0f) {

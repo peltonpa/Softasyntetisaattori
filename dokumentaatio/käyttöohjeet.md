@@ -10,7 +10,7 @@ Asennus NetBeansissa (ohita jos avaat ohjelman .jar-tiedostosta): Jos haluat saa
 
 5) Tee sama tiedostolle beads-library-1.0.jar
 
-Ohjelmaa käynnistettäessä ilmestyy graafinen käyttöliittymä. Äänilähteitä (oskillaattori) on 3, ja jokaiselle voi valita yhden ääniaallon (sini, saha, kolmio, kantti tai kohina). Oskillaattorit ovat oletusarvoltaan pois päältä ja ne saa päälle painamalla "On/off"-nappia. Jokaiselle oskillaattorille voi myös laskea tai nostaa oktaavia painamalla + tai - näppäimiä.
+Ohjelmaa käynnistettäessä ilmestyy graafinen käyttöliittymä. Äänilähteitä (oskillaattori) on 3, ja jokaiselle voi valita yhden ääniaallon (sini, saha, kolmio, kantti tai kohina). Oskillaattorit ovat oletusarvoltaan pois päältä ja ne saa päälle painamalla "On/off"-nappia. Jokaiselle oskillaattorille voi myös laskea tai nostaa oktaavia painamalla + tai - näppäimiä (tämä siis madaltaa ääntä tai tekee siitä korkeampaa).
 
 Soittaminen tapahtuu joko klikkaamalla graafisen käyttöliittymän koskettimia hiirellä, tai näppäimistön näppäimillä. Näppäimet vastaavat seuraavia nuotteja:
 
@@ -38,6 +38,7 @@ y = G#
 
 u = A#
 
-Ohjelman voi lopettaa painamalla Lopeta-näppäintä.
+
+Yksittäisten oskillaattorien äänenvoimakkuutta voi säätää niiden alla olevilla slidereilla, ja koko ohjelman äänenvoimakkuuden ulostuloa Master Volume-sliderilla. Ohjelman voi lopettaa painamalla Lopeta-näppäintä tai painamalla ruksia yläkulmassa.
 
 

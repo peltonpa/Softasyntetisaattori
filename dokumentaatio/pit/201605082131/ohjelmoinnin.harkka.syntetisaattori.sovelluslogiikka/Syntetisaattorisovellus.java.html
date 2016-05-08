@@ -311,7 +311,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * syntyy &#228;&#228;nt&#228;). </span></pre></td></tr>
+<td class=''><pre><span  class=''> * syntyy &#228;&#228;nt&#228;).</span></pre></td></tr>
 
 
 <tr>
@@ -325,7 +325,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * </span></pre></td></tr>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
 
 
 <tr>
@@ -479,7 +479,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param ac </span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
@@ -493,11 +493,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param ac Sovelluksen AudioContext-olio.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_32'/>
 32
 </td>
@@ -507,7 +507,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    public Syntetisaattorisovellus(AudioContext ac) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -521,7 +521,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.ac = ac;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    public Syntetisaattorisovellus(AudioContext ac) {</span></pre></td></tr>
 
 
 <tr>
@@ -535,7 +535,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.kuori = new Envelope(ac, 500);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.ac = ac;</span></pre></td></tr>
 
 
 <tr>
@@ -549,7 +549,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.oskillaattorit = new ArrayList();</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.kuori = new Envelope(ac, 500);</span></pre></td></tr>
 
 
 <tr>
@@ -563,7 +563,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.master = new Gain(ac, 1, 0.5f);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.oskillaattorit = new ArrayList();</span></pre></td></tr>
 
 
 <tr>
@@ -571,15 +571,13 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_37'/>
 37
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_37'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_37'></a>
 <span>
-1. <init> : removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::lisaaOskillaattorit &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        lisaaOskillaattorit();</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.master = new Gain(ac, 1, 0.5f);</span></pre></td></tr>
 
 
 <tr>
@@ -591,6 +589,22 @@ body{
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_38'>1</a>
 <span>
+1. <init> : removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::lisaaOskillaattorit &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        lisaaOskillaattorit();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_39'/>
+39
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_39'>1</a>
+<span>
 1. <init> : removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::alustaAudioContextiinGainit &rarr; KILLED<br/>
 
 </span>
@@ -600,20 +614,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_39'/>
-39
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_39'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_40'/>
 40
 </td>
@@ -623,7 +623,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -637,7 +637,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -651,7 +651,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Lis&#228;&#228; sovellukseen kolme oskillaattoria siniaalloilla.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -665,7 +665,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Lis&#228;&#228; sovellukseen kolme oskillaattoria siniaalloilla.</span></pre></td></tr>
 
 
 <tr>
@@ -679,11 +679,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void lisaaOskillaattorit() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_45'/>
 45
 </td>
@@ -693,7 +693,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.oskillaattorit.add(new Oskillaattori(ac, &#34;C&#34;, Buffer.SINE));</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void lisaaOskillaattorit() {</span></pre></td></tr>
 
 
 <tr>
@@ -735,11 +735,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.oskillaattorit.add(new Oskillaattori(ac, &#34;C&#34;, Buffer.SINE));</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_49'/>
 49
 </td>
@@ -749,7 +749,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -763,7 +763,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -777,7 +777,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Asettaa nuotti-parametrin m&#228;&#228;ritt&#228;m&#228;n nuotin kaikille. Nuotti on</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -791,7 +791,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * merkkijono ja k&#228;&#228;ntyy int-taajuudeksi (ks. Nuotti-enum).</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Asettaa nuotti-parametrin m&#228;&#228;ritt&#228;m&#228;n nuotin kaikille. Nuotti on</span></pre></td></tr>
 
 
 <tr>
@@ -805,7 +805,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param nuotti </span></pre></td></tr>
+<td class=''><pre><span  class=''>     * merkkijono ja k&#228;&#228;ntyy int-taajuudeksi (ks. Nuotti-enum).</span></pre></td></tr>
 
 
 <tr>
@@ -819,7 +819,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
@@ -833,17 +833,45 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>     * @param nuotti Kaikille oskillaattoreille asetettava nuotti.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_56'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_57'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>    public void asetaNuottiKaikille(String nuotti) {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_56'/>
-56
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_58'/>
+58
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_56'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_58'>3</a>
 <span>
 1. asetaNuottiKaikille : changed conditional boundary &rarr; KILLED<br/>
 2. asetaNuottiKaikille : Changed increment from 1 to -1 &rarr; KILLED<br/>
@@ -856,46 +884,18 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_57'/>
-57
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_59'/>
+59
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_57'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_59'>1</a>
 <span>
 1. asetaNuottiKaikille : removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Oskillaattori::asetaNuotti &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>            this.oskillaattorit.get(i).asetaNuotti(nuotti);</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_58'/>
-58
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_58'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_59'/>
-59
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_59'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -909,11 +909,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_61'/>
 61
 </td>
@@ -923,17 +923,45 @@ body{
 <span>
 </span>
 </td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_62'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_63'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>    private void alustaAudioContextiinGainit() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_62'/>
-62
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_64'/>
+64
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_62'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_64'>1</a>
 <span>
 1. alustaAudioContextiinGainit : removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::oskillaattoriInputitMasteriin &rarr; KILLED<br/>
 
@@ -944,12 +972,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_63'/>
-63
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_65'/>
+65
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_63'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_65'>1</a>
 <span>
 1. alustaAudioContextiinGainit : removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::masterGainAudioContextiin &rarr; SURVIVED<br/>
 
@@ -960,34 +988,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_64'/>
-64
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_64'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_65'/>
-65
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_65'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_66'/>
 66
 </td>
@@ -997,17 +997,45 @@ body{
 <span>
 </span>
 </td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_67'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_68'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>    private void oskillaattoriInputitMasteriin() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_67'/>
-67
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_69'/>
+69
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_67'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_69'>3</a>
 <span>
 1. oskillaattoriInputitMasteriin : changed conditional boundary &rarr; KILLED<br/>
 2. oskillaattoriInputitMasteriin : Changed increment from 1 to -1 &rarr; KILLED<br/>
@@ -1020,36 +1048,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_68'/>
-68
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_68'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>            Gain g = this.oskillaattorit.get(i).getGain();</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_69'/>
-69
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_69'>1</a>
-<span>
-1. oskillaattoriInputitMasteriin : removed call to net/beadsproject/beads/ugens/Gain::addInput &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>            this.master.addInput(g);</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_70'/>
 70
 </td>
@@ -1059,7 +1057,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            Gain g = this.oskillaattorit.get(i).getGain();</span></pre></td></tr>
 
 
 <tr>
@@ -1067,13 +1065,15 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_71'/>
 71
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_71'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_71'>1</a>
 <span>
+1. oskillaattoriInputitMasteriin : removed call to net/beadsproject/beads/ugens/Gain::addInput &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            this.master.addInput(g);</span></pre></td></tr>
 
 
 <tr>
@@ -1087,11 +1087,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_73'/>
 73
 </td>
@@ -1101,17 +1101,45 @@ body{
 <span>
 </span>
 </td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_74'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_75'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>    private void masterGainAudioContextiin() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_74'/>
-74
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_76'/>
+76
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_74'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_76'>1</a>
 <span>
 1. masterGainAudioContextiin : removed call to net/beadsproject/beads/ugens/Gain::addInput &rarr; SURVIVED<br/>
 
@@ -1122,34 +1150,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_75'/>
-75
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_75'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_76'/>
-76
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_76'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_77'/>
 77
 </td>
@@ -1159,7 +1159,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1173,7 +1173,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Hakee indeksill&#228; 0-2 oskillaattorin sovelluksen oskillaattoreista.</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1187,7 +1187,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param numero indeksinumero</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1201,7 +1201,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return palauttaa oskillaattorin indeksill&#228; 0-2.</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Hakee indeksill&#228; 0-2 oskillaattorin sovelluksen oskillaattoreista.</span></pre></td></tr>
 
 
 <tr>
@@ -1215,7 +1215,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
@@ -1229,23 +1229,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public Oskillaattori haeOskillaattoriIndeksilla(int numero) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param numero indeksinumero</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_83'/>
 83
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_83'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_83'></a>
 <span>
-1. haeOskillaattoriIndeksilla : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::haeOskillaattoriIndeksilla to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return this.oskillaattorit.get(numero);</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return palauttaa oskillaattorin indeksill&#228; 0-2.</span></pre></td></tr>
 
 
 <tr>
@@ -1259,7 +1257,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1273,21 +1271,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public Oskillaattori haeOskillaattoriIndeksilla(int numero) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_86'/>
 86
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_86'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_86'>1</a>
 <span>
+1. haeOskillaattoriIndeksilla : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::haeOskillaattoriIndeksilla to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return this.oskillaattorit.get(numero);</span></pre></td></tr>
 
 
 <tr>
@@ -1301,7 +1301,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Avaa AudioContext-olion jolloin kuulokeliit&#228;nn&#228;st&#228; pit&#228;isi</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1315,7 +1315,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * kuulua &#228;&#228;nt&#228; (olettaen, ett&#228; oskillaattorit ovat p&#228;&#228;ll&#228;).</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1329,7 +1329,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @throws Exception </span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1343,7 +1343,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Avaa AudioContext-olion jolloin kuulokeliit&#228;nn&#228;st&#228; pit&#228;isi kuulua &#228;&#228;nt&#228;</span></pre></td></tr>
 
 
 <tr>
@@ -1357,27 +1357,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void soitto() throws Exception {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * (olettaen, ett&#228; oskillaattorit ovat p&#228;&#228;ll&#228;).</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_92'/>
 92
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_92'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_92'></a>
 <span>
-1. soitto : removed call to net/beadsproject/beads/core/AudioContext::start &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        ac.start();</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_93'/>
 93
 </td>
@@ -1387,7 +1385,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @throws Exception Heitt&#228;&#228; poikkeuksen, jos AudioContextille sattuu</span></pre></td></tr>
 
 
 <tr>
@@ -1401,7 +1399,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>     * k&#228;ynnistyksess&#228; tai suorituksen alussa virhe.</span></pre></td></tr>
 
 
 <tr>
@@ -1415,7 +1413,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1429,25 +1427,27 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Hiljent&#228;&#228; &#228;&#228;nen ulostulon.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void soitto() throws Exception {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_97'/>
 97
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_97'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_97'>1</a>
 <span>
+1. soitto : removed call to net/beadsproject/beads/core/AudioContext::start &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @throws Exception </span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        ac.start();</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_98'/>
 98
 </td>
@@ -1457,7 +1457,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1471,27 +1471,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void hiljenna() throws Exception {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_100'/>
 100
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_100'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_100'></a>
 <span>
-1. hiljenna : removed call to net/beadsproject/beads/core/AudioContext::stop &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        ac.stop();</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_101'/>
 101
 </td>
@@ -1501,7 +1499,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Hiljent&#228;&#228; &#228;&#228;nen ulostulon.</span></pre></td></tr>
 
 
 <tr>
@@ -1515,7 +1513,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
@@ -1529,23 +1527,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public Envelope getKuori() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @throws Exception Heitt&#228;&#228; poikkeuksen, jos AudioContextin sulkemisessa</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_104'/>
 104
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_104'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_104'></a>
 <span>
-1. getKuori : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getKuori to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
-
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        return kuori;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * tapahtuu virhe.</span></pre></td></tr>
 
 
 <tr>
@@ -1559,7 +1555,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1573,37 +1569,37 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void hiljenna() throws Exception {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_107'/>
 107
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_107'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_107'>1</a>
 <span>
+1. hiljenna : removed call to net/beadsproject/beads/core/AudioContext::stop &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    public AudioContext getAc() {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        ac.stop();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_108'/>
 108
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_108'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_108'></a>
 <span>
-1. getAc : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getAc to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
-
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        return ac;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1617,7 +1613,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1631,37 +1627,37 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public Envelope getKuori() {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_111'/>
+111
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_111'>1</a>
+<span>
+1. getKuori : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getKuori to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return kuori;</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_111'/>
-111
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_111'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    public List&#60;Oskillaattori&#62; getOskillaattorit() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_112'/>
 112
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_112'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_112'></a>
 <span>
-1. getOskillaattorit : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getOskillaattorit to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return oskillaattorit;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1675,7 +1671,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1689,37 +1685,37 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public AudioContext getAc() {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_115'/>
+115
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_115'>1</a>
+<span>
+1. getAc : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getAc to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return ac;</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_115'/>
-115
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_115'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    public Gain getMaster() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_116'/>
 116
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_116'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_116'></a>
 <span>
-1. getMaster : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getMaster to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return master;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1733,7 +1729,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1747,21 +1743,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    public List&#60;Oskillaattori&#62; getOskillaattorit() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_119'/>
 119
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_119'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_119'>1</a>
 <span>
+1. getOskillaattorit : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getOskillaattorit to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return oskillaattorit;</span></pre></td></tr>
 
 
 <tr>
@@ -1775,7 +1773,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Asettaa master-&#228;&#228;nenvoimakkuuden halutulle tasolle. T&#228;t&#228; ohjaa vain </span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1789,7 +1787,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * GUI:n Master Volume-slideri.</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1803,21 +1801,23 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param gaini haluttu voimakkuus liukulukuna</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public Gain getMaster() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_123'/>
 123
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_123'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_123'>1</a>
 <span>
+1. getMaster : mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getMaster to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return master;</span></pre></td></tr>
 
 
 <tr>
@@ -1831,28 +1831,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setMasterGain(Float gaini) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_125'/>
 125
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_125'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_125'></a>
 <span>
-1. setMasterGain : changed conditional boundary &rarr; SURVIVED<br/>
-2. setMasterGain : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        if(gaini &#62; 1f) {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_126'/>
 126
 </td>
@@ -1862,7 +1859,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            gaini = 1f;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1876,28 +1873,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Asettaa master-&#228;&#228;nenvoimakkuuden halutulle tasolle. T&#228;t&#228; ohjaa vain GUI:n</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_128'/>
 128
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_128'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_128'></a>
 <span>
-1. setMasterGain : changed conditional boundary &rarr; SURVIVED<br/>
-2. setMasterGain : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        if (gaini &#60; 0f) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Master Volume-slideri.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_129'/>
 129
 </td>
@@ -1907,7 +1901,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            gaini = 0f;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
@@ -1921,11 +1915,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param gaini haluttu voimakkuus liukulukuna</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_131'/>
 131
 </td>
@@ -1935,11 +1929,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.master.setGain(gaini);</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_132'/>
 132
 </td>
@@ -1949,17 +1943,135 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>    public void setMasterGain(Float gaini) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_133'/>
+133
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_133'>2</a>
+<span>
+1. setMasterGain : changed conditional boundary &rarr; SURVIVED<br/>
+2. setMasterGain : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (gaini &#62; 1f) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_134'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            gaini = 1f;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_135'/>
+135
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_135'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_136'/>
+136
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_136'>2</a>
+<span>
+1. setMasterGain : changed conditional boundary &rarr; SURVIVED<br/>
+2. setMasterGain : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (gaini &#60; 0f) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_137'/>
+137
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_137'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            gaini = 0f;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_138'/>
+138
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_138'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_139'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.master.setGain(gaini);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_140'/>
+140
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_140'></a>
+<span>
+</span>
+</td>
 <td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_133'/>
-133
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_141'/>
+141
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_133'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_141'></a>
 <span>
 </span>
 </td>
@@ -1968,12 +2080,12 @@ body{
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_134'/>
-134
+<a name='org.pitest.mutationtest.report.html.SourceFile@7a55f148_142'/>
+142
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_134'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_142'></a>
 <span>
 </span>
 </td>
@@ -1984,73 +2096,63 @@ body{
 <tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_37'>37</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_37'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::lisaaOskillaattorit &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
 <td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_38'>38</a></td> 
 <td></td>
 <td>
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_38'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::lisaaOskillaattorit &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_39'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::alustaAudioContextiinGainit &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_56'>56</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_58'>58</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_56'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_58'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>asetaNuottiKaikille<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>asetaNuottiKaikille<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>asetaNuottiKaikille<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_57'>57</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_59'>59</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_57'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_59'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>asetaNuottiKaikille<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Oskillaattori::asetaNuotti &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_62'>62</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_64'>64</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_62'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_64'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>alustaAudioContextiinGainit<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::oskillaattoriInputitMasteriin &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_63'>63</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_65'>65</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_63'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_65'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>alustaAudioContextiinGainit<br/><b>Killed by : </b>none</span></span> removed call to ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::masterGainAudioContextiin &rarr; SURVIVED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_67'>67</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_67'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2060,105 +2162,115 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_69'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_71'>71</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_71'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>oskillaattoriInputitMasteriin<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to net/beadsproject/beads/ugens/Gain::addInput &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_74'>74</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_76'>76</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_74'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_76'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>masterGainAudioContextiin<br/><b>Killed by : </b>none</span></span> removed call to net/beadsproject/beads/ugens/Gain::addInput &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_83'>83</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_86'>86</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_83'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_86'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>haeOskillaattoriIndeksilla<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::haeOskillaattoriIndeksilla to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_92'>92</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_97'>97</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_92'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_97'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>soitto<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to net/beadsproject/beads/core/AudioContext::start &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_100'>100</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_107'>107</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_100'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_107'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hiljenna<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> removed call to net/beadsproject/beads/core/AudioContext::stop &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_104'>104</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_111'>111</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_104'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_111'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getKuori<br/><b>Killed by : </b>none</span></span> mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getKuori to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_108'>108</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_115'>115</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_108'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_115'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getAc<br/><b>Killed by : </b>none</span></span> mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getAc to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_112'>112</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_119'>119</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_112'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_119'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getOskillaattorit<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getOskillaattorit to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_116'>116</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_123'>123</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_116'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_123'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getMaster<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> mutated return of Object value for ohjelmoinnin/harkka/syntetisaattori/sovelluslogiikka/Syntetisaattorisovellus::getMaster to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_125'>125</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_133'>133</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_125'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_133'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setMasterGain<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setMasterGain<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_128'>128</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7a55f148_136'>136</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_128'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7a55f148_136'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setMasterGain<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setMasterGain<br/><b>Killed by : </b>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest</span></span> negated conditional &rarr; KILLED</p> 
 </td>
@@ -2181,7 +2293,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest (13 ms)</li>
+<li>ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest.ohjelmoinnin.harkka.syntetisaattori.sovelluslogiikka.SyntetisaattorisovellusTest (14 ms)</li>
 </ul>
 
 <br/>
